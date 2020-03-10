@@ -10,19 +10,21 @@ using System.Windows.Forms;
 
 namespace Proyec_ADS
 {
-    public partial class Form1 : Form
+    public partial class frm_menu : Form
     {
-        public Form1()
+        public frm_menu()
         {
             InitializeComponent();
             personalizardiseño();
         }
+
         private void personalizardiseño()
         {
             panel_estudiantes.Visible = false;
             panel_asistencia.Visible=false;
 
         }
+
         private void ocultarsubmenu()
         {
             if (panel_estudiantes.Visible == true)
@@ -30,6 +32,7 @@ namespace Proyec_ADS
             if (panel_asistencia.Visible == true)
                 panel_asistencia.Visible= false;
         }
+
         private void mostrarsubmenu(Panel submenu)
         {
             if (submenu.Visible == false)
@@ -40,6 +43,7 @@ namespace Proyec_ADS
             else
                 submenu.Visible = false;
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -49,8 +53,6 @@ namespace Proyec_ADS
         {
 
         }
-
-        
 
         private void btn_consulta_Click(object sender, EventArgs e)
         {
@@ -74,7 +76,6 @@ namespace Proyec_ADS
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
-            ////
             ocultarsubmenu();
         }
 
@@ -85,7 +86,6 @@ namespace Proyec_ADS
 
         private void btn_tomarasistencia_Click(object sender, EventArgs e)
         {
-            ////
             ocultarsubmenu();
         }
 
@@ -102,11 +102,11 @@ namespace Proyec_ADS
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estás seguro de cerrar sesión?", "Advertencia",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("¿Estás seguro de cerrar sesión?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
                 this.Close();
+            }
         }
-
 
         private void iconocerrar_Click(object sender, EventArgs e)
         {

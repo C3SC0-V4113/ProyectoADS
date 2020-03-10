@@ -180,7 +180,7 @@
         N44baCU16ZKadElNuqQmXVKTLqlJl9SkO1HuLyJNpX1UVvtlAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picbx_usuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAB65JREFUeF7tnUuofVMcx683ofiTR2aG8hqRDBAiAxNMiInHAGHgMWDwjww8EiWl

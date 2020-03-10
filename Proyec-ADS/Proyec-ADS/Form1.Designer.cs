@@ -1,6 +1,6 @@
 ﻿namespace Proyec_ADS
 {
-    partial class Form1
+    partial class frm_menu
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menu));
             this.panel_menulateral = new System.Windows.Forms.Panel();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_acercade = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.panel_logo = new System.Windows.Forms.Panel();
             this.lblemail = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picbx_usuario = new System.Windows.Forms.PictureBox();
             this.label_hora = new System.Windows.Forms.Label();
             this.label_fecha = new System.Windows.Forms.Label();
             this.fecha_hora = new System.Windows.Forms.Timer(this.components);
@@ -56,7 +56,7 @@
             this.panel_asistencia.SuspendLayout();
             this.panel_estudiantes.SuspendLayout();
             this.panel_logo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_usuario)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).BeginInit();
@@ -238,7 +238,7 @@
             this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(142)))));
             this.panel_logo.Controls.Add(this.lblemail);
             this.panel_logo.Controls.Add(this.lblnombre);
-            this.panel_logo.Controls.Add(this.pictureBox1);
+            this.panel_logo.Controls.Add(this.picbx_usuario);
             this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_logo.Location = new System.Drawing.Point(0, 0);
             this.panel_logo.Name = "panel_logo";
@@ -268,15 +268,15 @@
             this.lblnombre.TabIndex = 3;
             this.lblnombre.Text = "Nombre";
             // 
-            // pictureBox1
+            // picbx_usuario
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.picbx_usuario.Image = ((System.Drawing.Image)(resources.GetObject("picbx_usuario.Image")));
+            this.picbx_usuario.Location = new System.Drawing.Point(12, 3);
+            this.picbx_usuario.Name = "picbx_usuario";
+            this.picbx_usuario.Size = new System.Drawing.Size(100, 106);
+            this.picbx_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_usuario.TabIndex = 1;
+            this.picbx_usuario.TabStop = false;
             // 
             // label_hora
             // 
@@ -351,7 +351,7 @@
             this.iconocerrar.TabStop = false;
             this.iconocerrar.Click += new System.EventHandler(this.iconocerrar_Click);
             // 
-            // Form1
+            // frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -368,7 +368,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1200, 600);
-            this.Name = "Form1";
+            this.Name = "frm_menu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_menulateral.ResumeLayout(false);
@@ -376,7 +376,7 @@
             this.panel_estudiantes.ResumeLayout(false);
             this.panel_logo.ResumeLayout(false);
             this.panel_logo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_usuario)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).EndInit();
@@ -390,7 +390,7 @@
 
         private System.Windows.Forms.Panel panel_menulateral;
         private System.Windows.Forms.Panel panel_logo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picbx_usuario;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Panel panel_estudiantes;
