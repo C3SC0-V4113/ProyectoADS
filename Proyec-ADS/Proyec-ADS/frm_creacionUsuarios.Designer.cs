@@ -43,8 +43,10 @@
             this.Panel_CreacionUsuarios = new System.Windows.Forms.Panel();
             this.lbl_CreacionUsuarios = new System.Windows.Forms.Label();
             this.grb_Creaciondeusuarios = new System.Windows.Forms.GroupBox();
+            this.ptb_creacionusuarios = new System.Windows.Forms.PictureBox();
             this.Panel_CreacionUsuarios.SuspendLayout();
             this.grb_Creaciondeusuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_verificarcontra
@@ -148,6 +150,7 @@
             // Panel_CreacionUsuarios
             // 
             this.Panel_CreacionUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
+            this.Panel_CreacionUsuarios.Controls.Add(this.ptb_creacionusuarios);
             this.Panel_CreacionUsuarios.Controls.Add(this.lbl_CreacionUsuarios);
             this.Panel_CreacionUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_CreacionUsuarios.Location = new System.Drawing.Point(0, 0);
@@ -186,6 +189,16 @@
             this.grb_Creaciondeusuarios.TabStop = false;
             this.grb_Creaciondeusuarios.UseCompatibleTextRendering = true;
             // 
+            // ptb_creacionusuarios
+            // 
+            this.ptb_creacionusuarios.Image = ((System.Drawing.Image)(resources.GetObject("ptb_creacionusuarios.Image")));
+            this.ptb_creacionusuarios.Location = new System.Drawing.Point(183, -12);
+            this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
+            this.ptb_creacionusuarios.Size = new System.Drawing.Size(50, 77);
+            this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_creacionusuarios.TabIndex = 1;
+            this.ptb_creacionusuarios.TabStop = false;
+            // 
             // frm_creacionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +215,7 @@
             this.Panel_CreacionUsuarios.PerformLayout();
             this.grb_Creaciondeusuarios.ResumeLayout(false);
             this.grb_Creaciondeusuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,5 +236,6 @@
         private System.Windows.Forms.Panel Panel_CreacionUsuarios;
         private System.Windows.Forms.Label lbl_CreacionUsuarios;
         private System.Windows.Forms.GroupBox grb_Creaciondeusuarios;
+        private System.Windows.Forms.PictureBox ptb_creacionusuarios;
     }
 }

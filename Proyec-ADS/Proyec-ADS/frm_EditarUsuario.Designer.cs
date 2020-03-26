@@ -41,8 +41,10 @@
             this.panel_Editarusuarios = new System.Windows.Forms.Panel();
             this.lbl_Editarusuario = new System.Windows.Forms.Label();
             this.grb_Editarusuarios = new System.Windows.Forms.GroupBox();
+            this.ptb_creacionusuarios = new System.Windows.Forms.PictureBox();
             this.panel_Editarusuarios.SuspendLayout();
             this.grb_Editarusuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_nombre
@@ -129,6 +131,7 @@
             // panel_Editarusuarios
             // 
             this.panel_Editarusuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
+            this.panel_Editarusuarios.Controls.Add(this.ptb_creacionusuarios);
             this.panel_Editarusuarios.Controls.Add(this.lbl_Editarusuario);
             this.panel_Editarusuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Editarusuarios.Location = new System.Drawing.Point(0, 0);
@@ -164,6 +167,16 @@
             this.grb_Editarusuarios.TabIndex = 12;
             this.grb_Editarusuarios.TabStop = false;
             // 
+            // ptb_creacionusuarios
+            // 
+            this.ptb_creacionusuarios.Image = ((System.Drawing.Image)(resources.GetObject("ptb_creacionusuarios.Image")));
+            this.ptb_creacionusuarios.Location = new System.Drawing.Point(192, 0);
+            this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
+            this.ptb_creacionusuarios.Size = new System.Drawing.Size(56, 49);
+            this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_creacionusuarios.TabIndex = 2;
+            this.ptb_creacionusuarios.TabStop = false;
+            // 
             // frm_EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +192,7 @@
             this.panel_Editarusuarios.PerformLayout();
             this.grb_Editarusuarios.ResumeLayout(false);
             this.grb_Editarusuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +211,6 @@
         private System.Windows.Forms.Panel panel_Editarusuarios;
         private System.Windows.Forms.Label lbl_Editarusuario;
         private System.Windows.Forms.GroupBox grb_Editarusuarios;
+        private System.Windows.Forms.PictureBox ptb_creacionusuarios;
     }
 }
