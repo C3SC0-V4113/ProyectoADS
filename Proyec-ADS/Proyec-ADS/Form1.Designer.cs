@@ -326,6 +326,7 @@
             this.menuprincipal.Size = new System.Drawing.Size(136, 24);
             this.menuprincipal.TabIndex = 4;
             this.menuprincipal.Text = "Menú Principal";
+            
             // 
             // iconominimizar
             // 

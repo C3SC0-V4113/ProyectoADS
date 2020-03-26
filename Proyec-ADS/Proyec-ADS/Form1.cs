@@ -21,7 +21,7 @@ namespace Proyec_ADS
         private void personalizardiseño()
         {
             panel_estudiantes.Visible = false;
-            panel_asistencia.Visible=false;
+            panel_asistencia.Visible = false;
 
         }
 
@@ -30,7 +30,7 @@ namespace Proyec_ADS
             if (panel_estudiantes.Visible == true)
                 panel_estudiantes.Visible = false;
             if (panel_asistencia.Visible == true)
-                panel_asistencia.Visible= false;
+                panel_asistencia.Visible = false;
         }
 
         private void mostrarsubmenu(Panel submenu)
@@ -59,14 +59,14 @@ namespace Proyec_ADS
             ocultarsubmenu();
         }
 
-       private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-        
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-        
+
         }
 
         private void btn_estudiantes_Click(object sender, EventArgs e)
@@ -122,5 +122,6 @@ namespace Proyec_ADS
         {
 
         }
+
     }
 }

@@ -16,5 +16,25 @@ namespace Proyec_ADS
         {
             InitializeComponent();
         }
+
+        private void lbl_Carnet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_registraralumno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_registroAlumnos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+       
+      
     }
 }
