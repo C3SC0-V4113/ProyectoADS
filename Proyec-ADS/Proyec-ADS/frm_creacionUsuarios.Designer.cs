@@ -39,18 +39,20 @@
             this.lbl_contraseña = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.lbl_CodigoUsuario = new System.Windows.Forms.Label();
+            this.lbl_correo = new System.Windows.Forms.Label();
+            this.txt_correo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_verificarcontra
             // 
-            this.txt_verificarcontra.Location = new System.Drawing.Point(269, 240);
+            this.txt_verificarcontra.Location = new System.Drawing.Point(269, 272);
             this.txt_verificarcontra.Name = "txt_verificarcontra";
             this.txt_verificarcontra.Size = new System.Drawing.Size(100, 20);
             this.txt_verificarcontra.TabIndex = 21;
             // 
             // txt_contraseña
             // 
-            this.txt_contraseña.Location = new System.Drawing.Point(269, 200);
+            this.txt_contraseña.Location = new System.Drawing.Point(269, 232);
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.Size = new System.Drawing.Size(100, 20);
             this.txt_contraseña.TabIndex = 20;
@@ -78,7 +80,7 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(137, 311);
+            this.btn_guardar.Location = new System.Drawing.Point(137, 331);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(75, 23);
             this.btn_guardar.TabIndex = 16;
@@ -97,7 +99,7 @@
             // lbl_verificacion
             // 
             this.lbl_verificacion.AutoSize = true;
-            this.lbl_verificacion.Location = new System.Drawing.Point(134, 240);
+            this.lbl_verificacion.Location = new System.Drawing.Point(134, 272);
             this.lbl_verificacion.Name = "lbl_verificacion";
             this.lbl_verificacion.Size = new System.Drawing.Size(102, 13);
             this.lbl_verificacion.TabIndex = 14;
@@ -106,7 +108,7 @@
             // lbl_contraseña
             // 
             this.lbl_contraseña.AutoSize = true;
-            this.lbl_contraseña.Location = new System.Drawing.Point(134, 200);
+            this.lbl_contraseña.Location = new System.Drawing.Point(134, 232);
             this.lbl_contraseña.Name = "lbl_contraseña";
             this.lbl_contraseña.Size = new System.Drawing.Size(61, 13);
             this.lbl_contraseña.TabIndex = 13;
@@ -130,11 +132,29 @@
             this.lbl_CodigoUsuario.TabIndex = 11;
             this.lbl_CodigoUsuario.Text = "Codigo Usuario";
             // 
+            // lbl_correo
+            // 
+            this.lbl_correo.AutoSize = true;
+            this.lbl_correo.Location = new System.Drawing.Point(134, 190);
+            this.lbl_correo.Name = "lbl_correo";
+            this.lbl_correo.Size = new System.Drawing.Size(94, 13);
+            this.lbl_correo.TabIndex = 22;
+            this.lbl_correo.Text = "Correo Electronico";
+            // 
+            // txt_correo
+            // 
+            this.txt_correo.Location = new System.Drawing.Point(269, 187);
+            this.txt_correo.Name = "txt_correo";
+            this.txt_correo.Size = new System.Drawing.Size(100, 20);
+            this.txt_correo.TabIndex = 23;
+            // 
             // frm_creacionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 551);
+            this.Controls.Add(this.txt_correo);
+            this.Controls.Add(this.lbl_correo);
             this.Controls.Add(this.txt_verificarcontra);
             this.Controls.Add(this.txt_contraseña);
             this.Controls.Add(this.txt_apellido);
@@ -148,7 +168,7 @@
             this.Controls.Add(this.lbl_CodigoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_creacionUsuarios";
-            this.Text = "frm_creacionUsuarios";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +187,7 @@
         private System.Windows.Forms.Label lbl_contraseña;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Label lbl_CodigoUsuario;
+        private System.Windows.Forms.Label lbl_correo;
+        private System.Windows.Forms.TextBox txt_correo;
     }
 }

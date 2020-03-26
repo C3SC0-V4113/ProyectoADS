@@ -37,12 +37,14 @@
             this.txt_apellido = new System.Windows.Forms.TextBox();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.txt_verificarcontra = new System.Windows.Forms.TextBox();
+            this.txt_correo = new System.Windows.Forms.TextBox();
+            this.lbl_correo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Location = new System.Drawing.Point(91, 129);
+            this.lbl_nombre.Location = new System.Drawing.Point(91, 97);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.Size = new System.Drawing.Size(83, 13);
             this.lbl_nombre.TabIndex = 1;
@@ -69,7 +71,7 @@
             // lbl_apellido
             // 
             this.lbl_apellido.AutoSize = true;
-            this.lbl_apellido.Location = new System.Drawing.Point(91, 175);
+            this.lbl_apellido.Location = new System.Drawing.Point(91, 143);
             this.lbl_apellido.Name = "lbl_apellido";
             this.lbl_apellido.Size = new System.Drawing.Size(83, 13);
             this.lbl_apellido.TabIndex = 4;
@@ -86,14 +88,14 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(226, 129);
+            this.txt_nombre.Location = new System.Drawing.Point(226, 97);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
             this.txt_nombre.TabIndex = 7;
             // 
             // txt_apellido
             // 
-            this.txt_apellido.Location = new System.Drawing.Point(226, 175);
+            this.txt_apellido.Location = new System.Drawing.Point(226, 143);
             this.txt_apellido.Name = "txt_apellido";
             this.txt_apellido.Size = new System.Drawing.Size(100, 20);
             this.txt_apellido.TabIndex = 8;
@@ -112,11 +114,29 @@
             this.txt_verificarcontra.Size = new System.Drawing.Size(100, 20);
             this.txt_verificarcontra.TabIndex = 10;
             // 
+            // txt_correo
+            // 
+            this.txt_correo.Location = new System.Drawing.Point(226, 186);
+            this.txt_correo.Name = "txt_correo";
+            this.txt_correo.Size = new System.Drawing.Size(100, 20);
+            this.txt_correo.TabIndex = 25;
+            // 
+            // lbl_correo
+            // 
+            this.lbl_correo.AutoSize = true;
+            this.lbl_correo.Location = new System.Drawing.Point(91, 189);
+            this.lbl_correo.Name = "lbl_correo";
+            this.lbl_correo.Size = new System.Drawing.Size(94, 13);
+            this.lbl_correo.TabIndex = 24;
+            this.lbl_correo.Text = "Correo Electronico";
+            // 
             // frm_EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 551);
+            this.Controls.Add(this.txt_correo);
+            this.Controls.Add(this.lbl_correo);
             this.Controls.Add(this.txt_verificarcontra);
             this.Controls.Add(this.txt_contraseña);
             this.Controls.Add(this.txt_apellido);
@@ -145,5 +165,7 @@
         private System.Windows.Forms.TextBox txt_apellido;
         private System.Windows.Forms.TextBox txt_contraseña;
         private System.Windows.Forms.TextBox txt_verificarcontra;
+        private System.Windows.Forms.TextBox txt_correo;
+        private System.Windows.Forms.Label lbl_correo;
     }
 }
