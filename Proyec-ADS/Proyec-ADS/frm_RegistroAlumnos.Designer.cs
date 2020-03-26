@@ -38,6 +38,7 @@
             this.txt_apellido = new System.Windows.Forms.TextBox();
             this.txt_correo = new System.Windows.Forms.TextBox();
             this.cmb_carrera = new System.Windows.Forms.ComboBox();
+            this.btn_registraralumno = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_Carnet
@@ -121,11 +122,21 @@
             this.cmb_carrera.Size = new System.Drawing.Size(121, 21);
             this.cmb_carrera.TabIndex = 9;
             // 
+            // btn_registraralumno
+            // 
+            this.btn_registraralumno.Location = new System.Drawing.Point(661, 108);
+            this.btn_registraralumno.Name = "btn_registraralumno";
+            this.btn_registraralumno.Size = new System.Drawing.Size(75, 23);
+            this.btn_registraralumno.TabIndex = 10;
+            this.btn_registraralumno.Text = "Registrar";
+            this.btn_registraralumno.UseVisualStyleBackColor = true;
+            // 
             // frm_registroAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 551);
+            this.Controls.Add(this.btn_registraralumno);
             this.Controls.Add(this.cmb_carrera);
             this.Controls.Add(this.txt_correo);
             this.Controls.Add(this.txt_apellido);
@@ -156,5 +167,6 @@
         private System.Windows.Forms.TextBox txt_apellido;
         private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.ComboBox cmb_carrera;
+        private System.Windows.Forms.Button btn_registraralumno;
     }
 }
