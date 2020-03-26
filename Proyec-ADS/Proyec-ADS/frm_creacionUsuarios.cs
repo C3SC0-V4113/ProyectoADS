@@ -16,5 +16,12 @@ namespace Proyec_ADS
         {
             InitializeComponent();
         }
+
+        private void frm_creacionUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
