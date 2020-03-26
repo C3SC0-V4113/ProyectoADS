@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Docente.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

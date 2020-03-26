@@ -12,6 +12,8 @@ CREATE TABLE DOCENTES
 CodDocente varchar(6) not null,
 NombreDocente varchar(50),
 ApellidoDocente varchar(50),
+Contraseña varchar(max),
+CorreoElectronico varchar(max),
 )
 --TABLA ESTUDIANTE
 CREATE TABLE ESTUDIANTES
@@ -19,12 +21,6 @@ CREATE TABLE ESTUDIANTES
 CodCarnet varchar(8) not null,
 NombreAlumno varchar(40),
 CorreoAlumno varchar(25),
-Becados varchar(30),
-Inscrito varchar(10),
-Solvente varchar(25),
-Matricula varchar(25),
-Carrera varchar(30),
-Estado varchar(30),
 )
 --TABLA ASIGNATURA
 CREATE TABLE ASIGNATURAS
@@ -79,3 +75,29 @@ ALTER TABLE ASISTENCIAS
 ADD CONSTRAINT FK_CodGrupo
 FOREIGN KEY(CodGrupo)
 REFERENCES ASIGNATURAS(CodGrupo)
+
+--Procedimientos
+create proc CrearDocente
+@CodDocente varchar(6) not null,
+@NombreDocente varchar(50),
+@ApellidoDocente varchar(50),
+@Contraseña varchar(max),
+@CorreoElectronico varchar(max)
+as
+INSERT INTO DOCENTES(@CodDocente,@NombreDocente,@ApellidoDocente,@Contraseña,@CorreoElectronico)
+GO
+
+create proc EditarDocente
+ @CodUsuario int,
+ @Usuario varchar(25),
+ @Contraseña varchar(max),
+ @Nombre varchar(25),
+ @Apellido varchar(25),
+ @CodIntitución int
+As
+UPDATE USUARIOS SET Usuario=@Usuario,Contraseña=@Contraseña,Nombre=@Nombre,Apellido=@Apellido,CodIntitución=@CodIntitución
+where CodUsuario=@CodUsuario
+go
+
+
+--Pruebas

@@ -11,34 +11,31 @@ namespace Proyec_ADS
 {
     class Conexion
     {
-        class Conexion
+        string cadena = "server=localhost;database=RegistroDeAsistencia;integrated security=true";
+
+        private SqlConnection conexion = new SqlConnection("server=localhost;database=RegistroDeAsistencia;integrated security=true");
+
+        //public Conexion()
+        //{
+        //    conexion.ConnectionString = cadena;
+        //}
+
+        public SqlConnection AbrirConexion()
         {
-            string cadena = "server=localhost;database=RegistroDeAsistencia;integrated security=true";
-
-            private SqlConnection conexion = new SqlConnection("server=localhost;database=RegistroDeAsistencia;integrated security=true");
-
-            //public Conexion()
-            //{
-            //    conexion.ConnectionString = cadena;
-            //}
-
-            public SqlConnection AbrirConexion()
+            if (conexion.State == ConnectionState.Closed)
             {
-                if (conexion.State == ConnectionState.Closed)
-                {
-                    conexion.Open();
-                }
-                return conexion;
+                conexion.Open();
             }
+            return conexion;
+        }
 
-            public SqlConnection CerrarConexion()
+        public SqlConnection CerrarConexion()
+        {
+            if (conexion.State == ConnectionState.Open)
             {
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-                return conexion;
+                conexion.Close();
             }
+            return conexion;
         }
     }
 }
