@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Asistencia));
             this.lbl_codigo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,8 +42,10 @@
             this.rbtn_salida = new System.Windows.Forms.RadioButton();
             this.panel_RegistrodeAsistencia = new System.Windows.Forms.Panel();
             this.lbl_RegistroAsistencia = new System.Windows.Forms.Label();
+            this.ptb_RegistrodeAsistencia = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asistencia)).BeginInit();
             this.panel_RegistrodeAsistencia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_RegistrodeAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_codigo
@@ -73,9 +78,33 @@
             // 
             // dgv_asistencia
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_asistencia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_asistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_asistencia.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_asistencia.Location = new System.Drawing.Point(64, 234);
             this.dgv_asistencia.Name = "dgv_asistencia";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_asistencia.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_asistencia.Size = new System.Drawing.Size(833, 279);
             this.dgv_asistencia.TabIndex = 3;
             // 
@@ -128,6 +157,7 @@
             // panel_RegistrodeAsistencia
             // 
             this.panel_RegistrodeAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
+            this.panel_RegistrodeAsistencia.Controls.Add(this.ptb_RegistrodeAsistencia);
             this.panel_RegistrodeAsistencia.Controls.Add(this.lbl_RegistroAsistencia);
             this.panel_RegistrodeAsistencia.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_RegistrodeAsistencia.Location = new System.Drawing.Point(0, 0);
@@ -145,6 +175,15 @@
             this.lbl_RegistroAsistencia.Size = new System.Drawing.Size(282, 31);
             this.lbl_RegistroAsistencia.TabIndex = 0;
             this.lbl_RegistroAsistencia.Text = "Registro de asistencia";
+            // 
+            // ptb_RegistrodeAsistencia
+            // 
+            this.ptb_RegistrodeAsistencia.Location = new System.Drawing.Point(117, -2);
+            this.ptb_RegistrodeAsistencia.Name = "ptb_RegistrodeAsistencia";
+            this.ptb_RegistrodeAsistencia.Size = new System.Drawing.Size(85, 51);
+            this.ptb_RegistrodeAsistencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_RegistrodeAsistencia.TabIndex = 1;
+            this.ptb_RegistrodeAsistencia.TabStop = false;
             // 
             // frm_Asistencia
             // 
@@ -168,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asistencia)).EndInit();
             this.panel_RegistrodeAsistencia.ResumeLayout(false);
             this.panel_RegistrodeAsistencia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_RegistrodeAsistencia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +225,6 @@
         private System.Windows.Forms.RadioButton rbtn_salida;
         private System.Windows.Forms.Panel panel_RegistrodeAsistencia;
         private System.Windows.Forms.Label lbl_RegistroAsistencia;
+        private System.Windows.Forms.PictureBox ptb_RegistrodeAsistencia;
     }
 }
