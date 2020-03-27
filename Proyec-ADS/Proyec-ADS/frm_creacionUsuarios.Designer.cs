@@ -34,7 +34,6 @@
             this.txt_apellido = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.txt_codigo = new System.Windows.Forms.TextBox();
-            this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_apellido = new System.Windows.Forms.Label();
             this.lbl_verificacion = new System.Windows.Forms.Label();
             this.lbl_contraseña = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.Panel_CreacionUsuarios = new System.Windows.Forms.Panel();
             this.lbl_CreacionUsuarios = new System.Windows.Forms.Label();
             this.grb_Creaciondeusuarios = new System.Windows.Forms.GroupBox();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.ptb_creacionusuarios = new System.Windows.Forms.PictureBox();
             this.Panel_CreacionUsuarios.SuspendLayout();
             this.grb_Creaciondeusuarios.SuspendLayout();
@@ -83,19 +83,6 @@
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(183, 20);
             this.txt_codigo.TabIndex = 17;
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
-            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar.Location = new System.Drawing.Point(592, 282);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(187, 62);
-            this.btn_guardar.TabIndex = 16;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.UseVisualStyleBackColor = true;
             // 
             // lbl_apellido
             // 
@@ -155,7 +142,7 @@
             this.Panel_CreacionUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_CreacionUsuarios.Location = new System.Drawing.Point(0, 0);
             this.Panel_CreacionUsuarios.Name = "Panel_CreacionUsuarios";
-            this.Panel_CreacionUsuarios.Size = new System.Drawing.Size(950, 49);
+            this.Panel_CreacionUsuarios.Size = new System.Drawing.Size(950, 58);
             this.Panel_CreacionUsuarios.TabIndex = 22;
             // 
             // lbl_CreacionUsuarios
@@ -189,15 +176,29 @@
             this.grb_Creaciondeusuarios.TabStop = false;
             this.grb_Creaciondeusuarios.UseCompatibleTextRendering = true;
             // 
+            // btn_guardar
+            // 
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(592, 282);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(187, 62);
+            this.btn_guardar.TabIndex = 16;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            // 
             // ptb_creacionusuarios
             // 
-            this.ptb_creacionusuarios.Image = ((System.Drawing.Image)(resources.GetObject("ptb_creacionusuarios.Image")));
-            this.ptb_creacionusuarios.Location = new System.Drawing.Point(183, -12);
+            this.ptb_creacionusuarios.Image = global::Proyec_ADS.Properties.Resources._2;
+            this.ptb_creacionusuarios.Location = new System.Drawing.Point(43, 0);
             this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
-            this.ptb_creacionusuarios.Size = new System.Drawing.Size(50, 77);
+            this.ptb_creacionusuarios.Size = new System.Drawing.Size(94, 58);
             this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptb_creacionusuarios.TabIndex = 1;
             this.ptb_creacionusuarios.TabStop = false;
+            this.ptb_creacionusuarios.Click += new System.EventHandler(this.ptb_creacionusuarios_Click);
             // 
             // frm_creacionUsuarios
             // 

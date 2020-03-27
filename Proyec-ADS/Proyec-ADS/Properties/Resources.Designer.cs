@@ -63,6 +63,16 @@ namespace Proyec_ADS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2 {
+            get {
+                object obj = ResourceManager.GetObject("2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap estudiante {
             get {
                 object obj = ResourceManager.GetObject("estudiante", resourceCulture);
@@ -76,6 +86,16 @@ namespace Proyec_ADS.Properties {
         internal static System.Drawing.Bitmap estudiante1 {
             get {
                 object obj = ResourceManager.GetObject("estudiante1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotob {
+            get {
+                object obj = ResourceManager.GetObject("fotob", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

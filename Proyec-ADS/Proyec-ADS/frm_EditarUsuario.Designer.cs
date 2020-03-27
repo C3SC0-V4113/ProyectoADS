@@ -39,12 +39,12 @@
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.txt_verificarcontra = new System.Windows.Forms.TextBox();
             this.panel_Editarusuarios = new System.Windows.Forms.Panel();
+            this.ptb_creacionusuarios = new System.Windows.Forms.PictureBox();
             this.lbl_Editarusuario = new System.Windows.Forms.Label();
             this.grb_Editarusuarios = new System.Windows.Forms.GroupBox();
-            this.ptb_creacionusuarios = new System.Windows.Forms.PictureBox();
             this.panel_Editarusuarios.SuspendLayout();
-            this.grb_Editarusuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).BeginInit();
+            this.grb_Editarusuarios.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_nombre
@@ -136,8 +136,18 @@
             this.panel_Editarusuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Editarusuarios.Location = new System.Drawing.Point(0, 0);
             this.panel_Editarusuarios.Name = "panel_Editarusuarios";
-            this.panel_Editarusuarios.Size = new System.Drawing.Size(950, 49);
+            this.panel_Editarusuarios.Size = new System.Drawing.Size(950, 58);
             this.panel_Editarusuarios.TabIndex = 11;
+            // 
+            // ptb_creacionusuarios
+            // 
+            this.ptb_creacionusuarios.Image = ((System.Drawing.Image)(resources.GetObject("ptb_creacionusuarios.Image")));
+            this.ptb_creacionusuarios.Location = new System.Drawing.Point(43, 0);
+            this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
+            this.ptb_creacionusuarios.Size = new System.Drawing.Size(86, 58);
+            this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_creacionusuarios.TabIndex = 2;
+            this.ptb_creacionusuarios.TabStop = false;
             // 
             // lbl_Editarusuario
             // 
@@ -167,16 +177,6 @@
             this.grb_Editarusuarios.TabIndex = 12;
             this.grb_Editarusuarios.TabStop = false;
             // 
-            // ptb_creacionusuarios
-            // 
-            this.ptb_creacionusuarios.Image = ((System.Drawing.Image)(resources.GetObject("ptb_creacionusuarios.Image")));
-            this.ptb_creacionusuarios.Location = new System.Drawing.Point(192, 0);
-            this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
-            this.ptb_creacionusuarios.Size = new System.Drawing.Size(56, 49);
-            this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptb_creacionusuarios.TabIndex = 2;
-            this.ptb_creacionusuarios.TabStop = false;
-            // 
             // frm_EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,9 +190,9 @@
             this.Text = "frm_EditarUsuario";
             this.panel_Editarusuarios.ResumeLayout(false);
             this.panel_Editarusuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).EndInit();
             this.grb_Editarusuarios.ResumeLayout(false);
             this.grb_Editarusuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).EndInit();
             this.ResumeLayout(false);
 
         }

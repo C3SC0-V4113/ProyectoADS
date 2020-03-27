@@ -22,6 +22,13 @@ namespace Proyec_ADS
 
         }
 
+        private void ptb_creacionusuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
         
     }
 }
