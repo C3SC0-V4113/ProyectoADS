@@ -191,7 +191,7 @@
             // 
             // ptb_creacionusuarios
             // 
-            this.ptb_creacionusuarios.Image = global::Proyec_ADS.Properties.Resources._2;
+            this.ptb_creacionusuarios.Image = global::Proyec_ADS.Properties.Resources.e2m2;
             this.ptb_creacionusuarios.Location = new System.Drawing.Point(43, 0);
             this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
             this.ptb_creacionusuarios.Size = new System.Drawing.Size(94, 58);
