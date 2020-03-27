@@ -4,6 +4,7 @@ CREATE DATABASE RegistroDeAsistencia
 GO
 USE RegistroDeAsistencia
 GO
+
 --DROP DATABASE RegistroDeAsistencia
 --CREACION DE TABLAS
 --TABLA DOCENTE
@@ -12,7 +13,12 @@ CREATE TABLE DOCENTES
 CodDocente varchar(6) not null,
 NombreDocente varchar(50),
 ApellidoDocente varchar(50),
+Email nvarchar(300) not null,
+Usuario char(10) not null,
+Pass nvarchar(100) not null
 )
+
+
 --TABLA ESTUDIANTE
 CREATE TABLE ESTUDIANTES
 (
@@ -26,6 +32,7 @@ Matricula varchar(25),
 Carrera varchar(30),
 Estado varchar(30),
 )
+
 --TABLA ASIGNATURA
 CREATE TABLE ASIGNATURAS
 (
@@ -42,6 +49,24 @@ HoraSalida date,
 CodGrupo varchar(8),
 Asistencia bit,
 )
+
+--PROCEDIMIENTOS ALMACENADOS---
+
+create proc AgregarDocente
+@CDocente varchar(6),
+@Ndocente varchar(50),
+@Adocente varchar(50),
+@Correo nvarchar(300),
+@User char(10),
+@contra nvarchar(100)
+as insert into DOCENTES(CodDocente,NombreDocente,ApellidoDocente,Email,Usuario,Pass) values(@CDocente,@Ndocente,@Adocente,@Correo,@User,ENCRYPTBYPASSPHRASE('password',@contra))
+go
+
+exec AgregarDocente 'DD102303','Carlos','Martínez','pinochofino@gmail.com','Elprofe','seguro';
+select*from DOCENTES;
+select Usuario,Email,Pass=CONVERT(nvarchar(100),DECRYPTBYPASSPHRASE('password',pass)) from DOCENTES where Usuario='Elprofe';
+
+
 
 --LLAVES PRIMARIAS
 ALTER TABLE DOCENTES

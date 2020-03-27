@@ -35,6 +35,7 @@
             this.btn_iniciar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.linklbl_olvido = new System.Windows.Forms.LinkLabel();
+            this.lblerror = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_usuario
@@ -66,26 +67,29 @@
             // 
             this.txt_contraseña.Location = new System.Drawing.Point(150, 188);
             this.txt_contraseña.Name = "txt_contraseña";
+            this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(100, 20);
             this.txt_contraseña.TabIndex = 3;
             // 
             // btn_iniciar
             // 
-            this.btn_iniciar.Location = new System.Drawing.Point(96, 267);
+            this.btn_iniciar.Location = new System.Drawing.Point(31, 335);
             this.btn_iniciar.Name = "btn_iniciar";
             this.btn_iniciar.Size = new System.Drawing.Size(110, 33);
             this.btn_iniciar.TabIndex = 4;
             this.btn_iniciar.Text = "Iniciar Sesion";
             this.btn_iniciar.UseVisualStyleBackColor = true;
+            this.btn_iniciar.Click += new System.EventHandler(this.btn_iniciar_Click);
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(96, 320);
+            this.btn_salir.Location = new System.Drawing.Point(186, 329);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(110, 39);
             this.btn_salir.TabIndex = 5;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // linklbl_olvido
             // 
@@ -96,12 +100,27 @@
             this.linklbl_olvido.TabIndex = 6;
             this.linklbl_olvido.TabStop = true;
             this.linklbl_olvido.Text = "¿Olvidaste tu contraseña?";
+            this.linklbl_olvido.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_olvido_LinkClicked);
+            // 
+            // lblerror
+            // 
+            this.lblerror.AutoSize = true;
+            this.lblerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblerror.Image = global::Proyec_ADS.Properties.Resources.vcsconflicting_93497;
+            this.lblerror.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblerror.Location = new System.Drawing.Point(28, 284);
+            this.lblerror.Name = "lblerror";
+            this.lblerror.Size = new System.Drawing.Size(74, 16);
+            this.lblerror.TabIndex = 7;
+            this.lblerror.Text = "         Error :(";
+            this.lblerror.Visible = false;
             // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 411);
+            this.Controls.Add(this.lblerror);
             this.Controls.Add(this.linklbl_olvido);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_iniciar);
@@ -125,5 +144,6 @@
         private System.Windows.Forms.Button btn_iniciar;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.LinkLabel linklbl_olvido;
+        private System.Windows.Forms.Label lblerror;
     }
 }
