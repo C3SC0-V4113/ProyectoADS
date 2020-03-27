@@ -30,14 +30,7 @@ namespace Proyec_ADS
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            var result = conec.recoverPassword(txtRecuperar.Text);
-            lblMensaje.Text = result;
-
-            if (lblMensaje.Text!=null) {
-                btnEnviar.Enabled = false;
-                btnAceptar.Visible = true;
-               
-            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -50,6 +43,30 @@ namespace Proyec_ADS
             frm_login Log = new frm_login();
             Log.Visible = true;
             this.Visible = false;
+        }
+
+        private void iconominimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void iconocerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnEnviar_Click_1(object sender, EventArgs e)
+        {
+            var result = conec.recoverPassword(txtRecuperar.Text);
+            lblMensaje.Text = result;
+
+            if (lblMensaje.Text != null)
+            {
+                btnEnviar.Enabled = false;
+                btnAceptar.Visible = true;
+
+            }
+
         }
     }
 }
