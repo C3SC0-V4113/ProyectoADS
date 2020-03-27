@@ -31,20 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menu));
             this.panel_menulateral = new System.Windows.Forms.Panel();
-            this.btn_salir = new System.Windows.Forms.Button();
-            this.btn_acercade = new System.Windows.Forms.Button();
             this.panel_asistencia = new System.Windows.Forms.Panel();
             this.btn_regasistencia = new System.Windows.Forms.Button();
             this.btn_tomarasistencia = new System.Windows.Forms.Button();
-            this.btn_asistencia = new System.Windows.Forms.Button();
             this.panel_estudiantes = new System.Windows.Forms.Panel();
             this.btn_consulta = new System.Windows.Forms.Button();
             this.btn_registrar = new System.Windows.Forms.Button();
-            this.btn_estudiantes = new System.Windows.Forms.Button();
             this.panel_logo = new System.Windows.Forms.Panel();
             this.lblemail = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
-            this.picbx_usuario = new System.Windows.Forms.PictureBox();
             this.label_hora = new System.Windows.Forms.Label();
             this.label_fecha = new System.Windows.Forms.Label();
             this.fecha_hora = new System.Windows.Forms.Timer(this.components);
@@ -52,14 +47,19 @@
             this.menuprincipal = new System.Windows.Forms.Label();
             this.iconominimizar = new System.Windows.Forms.PictureBox();
             this.iconocerrar = new System.Windows.Forms.PictureBox();
+            this.btn_salir = new System.Windows.Forms.Button();
+            this.btn_acercade = new System.Windows.Forms.Button();
+            this.btn_asistencia = new System.Windows.Forms.Button();
+            this.btn_estudiantes = new System.Windows.Forms.Button();
+            this.picbx_usuario = new System.Windows.Forms.PictureBox();
             this.panel_menulateral.SuspendLayout();
             this.panel_asistencia.SuspendLayout();
             this.panel_estudiantes.SuspendLayout();
             this.panel_logo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_usuario)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_usuario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_menulateral
@@ -77,42 +77,6 @@
             this.panel_menulateral.Name = "panel_menulateral";
             this.panel_menulateral.Size = new System.Drawing.Size(250, 600);
             this.panel_menulateral.TabIndex = 0;
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_salir.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_salir.FlatAppearance.BorderSize = 0;
-            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.ForeColor = System.Drawing.Color.White;
-            this.btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_salir.Image")));
-            this.btn_salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salir.Location = new System.Drawing.Point(0, 546);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(250, 54);
-            this.btn_salir.TabIndex = 6;
-            this.btn_salir.Text = "LogOut";
-            this.btn_salir.UseVisualStyleBackColor = true;
-            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            // 
-            // btn_acercade
-            // 
-            this.btn_acercade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_acercade.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_acercade.FlatAppearance.BorderSize = 0;
-            this.btn_acercade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_acercade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_acercade.ForeColor = System.Drawing.Color.White;
-            this.btn_acercade.Image = ((System.Drawing.Image)(resources.GetObject("btn_acercade.Image")));
-            this.btn_acercade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_acercade.Location = new System.Drawing.Point(0, 387);
-            this.btn_acercade.Name = "btn_acercade";
-            this.btn_acercade.Size = new System.Drawing.Size(250, 40);
-            this.btn_acercade.TabIndex = 5;
-            this.btn_acercade.Text = "Acerca de";
-            this.btn_acercade.UseVisualStyleBackColor = true;
-            this.btn_acercade.Click += new System.EventHandler(this.btn_acercade_Click);
             // 
             // panel_asistencia
             // 
@@ -157,23 +121,6 @@
             this.btn_tomarasistencia.UseVisualStyleBackColor = false;
             this.btn_tomarasistencia.Click += new System.EventHandler(this.btn_tomarasistencia_Click);
             // 
-            // btn_asistencia
-            // 
-            this.btn_asistencia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_asistencia.FlatAppearance.BorderSize = 0;
-            this.btn_asistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_asistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_asistencia.ForeColor = System.Drawing.Color.White;
-            this.btn_asistencia.Image = ((System.Drawing.Image)(resources.GetObject("btn_asistencia.Image")));
-            this.btn_asistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_asistencia.Location = new System.Drawing.Point(0, 256);
-            this.btn_asistencia.Name = "btn_asistencia";
-            this.btn_asistencia.Size = new System.Drawing.Size(250, 45);
-            this.btn_asistencia.TabIndex = 3;
-            this.btn_asistencia.Text = "Asistencia";
-            this.btn_asistencia.UseVisualStyleBackColor = true;
-            this.btn_asistencia.Click += new System.EventHandler(this.btn_asistencia_Click);
-            // 
             // panel_estudiantes
             // 
             this.panel_estudiantes.Controls.Add(this.btn_consulta);
@@ -216,23 +163,6 @@
             this.btn_registrar.UseVisualStyleBackColor = false;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
-            // btn_estudiantes
-            // 
-            this.btn_estudiantes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_estudiantes.FlatAppearance.BorderSize = 0;
-            this.btn_estudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_estudiantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_estudiantes.ForeColor = System.Drawing.Color.White;
-            this.btn_estudiantes.Image = ((System.Drawing.Image)(resources.GetObject("btn_estudiantes.Image")));
-            this.btn_estudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_estudiantes.Location = new System.Drawing.Point(0, 127);
-            this.btn_estudiantes.Name = "btn_estudiantes";
-            this.btn_estudiantes.Size = new System.Drawing.Size(250, 45);
-            this.btn_estudiantes.TabIndex = 1;
-            this.btn_estudiantes.Text = "Estudiantes";
-            this.btn_estudiantes.UseVisualStyleBackColor = true;
-            this.btn_estudiantes.Click += new System.EventHandler(this.btn_estudiantes_Click);
-            // 
             // panel_logo
             // 
             this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(142)))));
@@ -267,16 +197,6 @@
             this.lblnombre.Size = new System.Drawing.Size(57, 16);
             this.lblnombre.TabIndex = 3;
             this.lblnombre.Text = "Nombre";
-            // 
-            // picbx_usuario
-            // 
-            this.picbx_usuario.Image = ((System.Drawing.Image)(resources.GetObject("picbx_usuario.Image")));
-            this.picbx_usuario.Location = new System.Drawing.Point(12, 3);
-            this.picbx_usuario.Name = "picbx_usuario";
-            this.picbx_usuario.Size = new System.Drawing.Size(100, 106);
-            this.picbx_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picbx_usuario.TabIndex = 1;
-            this.picbx_usuario.TabStop = false;
             // 
             // label_hora
             // 
@@ -351,6 +271,86 @@
             this.iconocerrar.TabStop = false;
             this.iconocerrar.Click += new System.EventHandler(this.iconocerrar_Click);
             // 
+            // btn_salir
+            // 
+            this.btn_salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_salir.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_salir.FlatAppearance.BorderSize = 0;
+            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.ForeColor = System.Drawing.Color.White;
+            this.btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_salir.Image")));
+            this.btn_salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salir.Location = new System.Drawing.Point(0, 546);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(250, 54);
+            this.btn_salir.TabIndex = 6;
+            this.btn_salir.Text = "LogOut";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
+            // btn_acercade
+            // 
+            this.btn_acercade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_acercade.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_acercade.FlatAppearance.BorderSize = 0;
+            this.btn_acercade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_acercade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_acercade.ForeColor = System.Drawing.Color.White;
+            this.btn_acercade.Image = ((System.Drawing.Image)(resources.GetObject("btn_acercade.Image")));
+            this.btn_acercade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_acercade.Location = new System.Drawing.Point(0, 387);
+            this.btn_acercade.Name = "btn_acercade";
+            this.btn_acercade.Size = new System.Drawing.Size(250, 40);
+            this.btn_acercade.TabIndex = 5;
+            this.btn_acercade.Text = "Acerca de";
+            this.btn_acercade.UseVisualStyleBackColor = true;
+            this.btn_acercade.Click += new System.EventHandler(this.btn_acercade_Click);
+            // 
+            // btn_asistencia
+            // 
+            this.btn_asistencia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_asistencia.FlatAppearance.BorderSize = 0;
+            this.btn_asistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_asistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_asistencia.ForeColor = System.Drawing.Color.White;
+            this.btn_asistencia.Image = ((System.Drawing.Image)(resources.GetObject("btn_asistencia.Image")));
+            this.btn_asistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_asistencia.Location = new System.Drawing.Point(0, 256);
+            this.btn_asistencia.Name = "btn_asistencia";
+            this.btn_asistencia.Size = new System.Drawing.Size(250, 45);
+            this.btn_asistencia.TabIndex = 3;
+            this.btn_asistencia.Text = "Asistencia";
+            this.btn_asistencia.UseVisualStyleBackColor = true;
+            this.btn_asistencia.Click += new System.EventHandler(this.btn_asistencia_Click);
+            // 
+            // btn_estudiantes
+            // 
+            this.btn_estudiantes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_estudiantes.FlatAppearance.BorderSize = 0;
+            this.btn_estudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_estudiantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_estudiantes.ForeColor = System.Drawing.Color.White;
+            this.btn_estudiantes.Image = ((System.Drawing.Image)(resources.GetObject("btn_estudiantes.Image")));
+            this.btn_estudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_estudiantes.Location = new System.Drawing.Point(0, 127);
+            this.btn_estudiantes.Name = "btn_estudiantes";
+            this.btn_estudiantes.Size = new System.Drawing.Size(250, 45);
+            this.btn_estudiantes.TabIndex = 1;
+            this.btn_estudiantes.Text = "Estudiantes";
+            this.btn_estudiantes.UseVisualStyleBackColor = true;
+            this.btn_estudiantes.Click += new System.EventHandler(this.btn_estudiantes_Click);
+            // 
+            // picbx_usuario
+            // 
+            this.picbx_usuario.Image = ((System.Drawing.Image)(resources.GetObject("picbx_usuario.Image")));
+            this.picbx_usuario.Location = new System.Drawing.Point(12, 3);
+            this.picbx_usuario.Name = "picbx_usuario";
+            this.picbx_usuario.Size = new System.Drawing.Size(100, 106);
+            this.picbx_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_usuario.TabIndex = 1;
+            this.picbx_usuario.TabStop = false;
+            // 
             // frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -376,11 +376,11 @@
             this.panel_estudiantes.ResumeLayout(false);
             this.panel_logo.ResumeLayout(false);
             this.panel_logo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_usuario)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_usuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
