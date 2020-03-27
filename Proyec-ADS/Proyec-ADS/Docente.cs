@@ -32,7 +32,7 @@ namespace Proyec_ADS
         public void Editar(string CodUsuario, string contraseña, string Nombre, string Apellido, string Correo)
         {
             comando.Connection = conex.AbrirConexion();
-            comando.CommandText = "CrearDocente";
+            comando.CommandText = "EditarDocente";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@CodDocente", CodUsuario);
@@ -43,6 +43,5 @@ namespace Proyec_ADS
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
-
     }
 }

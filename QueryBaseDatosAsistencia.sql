@@ -9,7 +9,7 @@ GO
 --TABLA DOCENTE
 CREATE TABLE DOCENTES
 (
-CodDocente varchar(6) not null,
+CodDocente varchar(8) not null,
 NombreDocente varchar(50),
 ApellidoDocente varchar(50),
 Contraseña varchar(max),
@@ -26,7 +26,7 @@ CorreoAlumno varchar(25),
 CREATE TABLE ASIGNATURAS
 (
 CodGrupo varchar(8) not null,
-CodDocente varchar(6) not null,
+CodDocente varchar(8) not null,
 CodCarnet varchar(8) not null,
 )
 --TABLA ASISTENCIA
@@ -78,26 +78,29 @@ REFERENCES ASIGNATURAS(CodGrupo)
 
 --Procedimientos
 create proc CrearDocente
-@CodDocente varchar(6) not null,
+@CodDocente varchar(8),
 @NombreDocente varchar(50),
 @ApellidoDocente varchar(50),
 @Contraseña varchar(max),
 @CorreoElectronico varchar(max)
 as
-INSERT INTO DOCENTES(@CodDocente,@NombreDocente,@ApellidoDocente,@Contraseña,@CorreoElectronico)
+INSERT INTO DOCENTES VALUES(@CodDocente,@NombreDocente,@ApellidoDocente,@Contraseña,@CorreoElectronico)
 GO
 
 create proc EditarDocente
- @CodUsuario int,
- @Usuario varchar(25),
- @Contraseña varchar(max),
- @Nombre varchar(25),
- @Apellido varchar(25),
- @CodIntitución int
+@CodDocente varchar(8),
+@NombreDocente varchar(50),
+@ApellidoDocente varchar(50),
+@Contraseña varchar(max),
+@CorreoElectronico varchar(max)
 As
-UPDATE USUARIOS SET Usuario=@Usuario,Contraseña=@Contraseña,Nombre=@Nombre,Apellido=@Apellido,CodIntitución=@CodIntitución
-where CodUsuario=@CodUsuario
+UPDATE DOCENTES SET Contraseña=@Contraseña,NombreDocente=@NombreDocente,ApellidoDocente=@ApellidoDocente,CorreoElectronico=@CorreoElectronico
+where CodDocente=@CodDocente
 go
 
 
 --Pruebas
+exec CrearDocente 'VC190544','Francisco José','Valle Cornejo','ratchet00','frankjose00@gmail.com'
+SELECT*FROM DOCENTES
+
+exec EditarDocente 'VC190544','Cosme','Fulanito','betho00','vallecesco@gmail.com'
