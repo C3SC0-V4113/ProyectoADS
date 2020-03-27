@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txt_verificarcontra = new System.Windows.Forms.TextBox();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.txt_apellido = new System.Windows.Forms.TextBox();
@@ -41,6 +42,8 @@
             this.lbl_CodigoUsuario = new System.Windows.Forms.Label();
             this.lbl_correo = new System.Windows.Forms.Label();
             this.txt_correo = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_verificarcontra
@@ -77,6 +80,7 @@
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(100, 20);
             this.txt_codigo.TabIndex = 17;
+            this.txt_codigo.Leave += new System.EventHandler(this.txt_codigo_Leave);
             // 
             // btn_guardar
             // 
@@ -149,6 +153,10 @@
             this.txt_correo.Size = new System.Drawing.Size(100, 20);
             this.txt_correo.TabIndex = 23;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_creacionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +178,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_creacionUsuarios";
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +199,6 @@
         private System.Windows.Forms.Label lbl_CodigoUsuario;
         private System.Windows.Forms.Label lbl_correo;
         private System.Windows.Forms.TextBox txt_correo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

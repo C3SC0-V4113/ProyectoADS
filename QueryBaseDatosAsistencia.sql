@@ -98,9 +98,18 @@ UPDATE DOCENTES SET Contraseña=@Contraseña,NombreDocente=@NombreDocente,Apellido
 where CodDocente=@CodDocente
 go
 
+create proc BuscarCodigoDocente
+@CodDocente varchar(8)
+as
+SELECT*FROM DOCENTES
+WHERE CodDocente=@CodDocente
+GO
 
 --Pruebas
 exec CrearDocente 'VC190544','Francisco José','Valle Cornejo','ratchet00','frankjose00@gmail.com'
-SELECT*FROM DOCENTES
 
 exec EditarDocente 'VC190544','Cosme','Fulanito','betho00','vallecesco@gmail.com'
+
+exec BuscarCodigoDocente VC190544
+
+SELECT*FROM DOCENTES

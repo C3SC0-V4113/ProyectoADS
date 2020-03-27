@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.lbl_contraseña = new System.Windows.Forms.Label();
             this.lbl_verificacion = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.txt_verificarcontra = new System.Windows.Forms.TextBox();
             this.txt_correo = new System.Windows.Forms.TextBox();
             this.lbl_correo = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_nombre
@@ -131,6 +134,10 @@
             this.lbl_correo.TabIndex = 24;
             this.lbl_correo.Text = "Correo Electronico";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +157,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_EditarUsuario";
             this.Text = "frm_EditarUsuario";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +176,6 @@
         private System.Windows.Forms.TextBox txt_verificarcontra;
         private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Label lbl_correo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
