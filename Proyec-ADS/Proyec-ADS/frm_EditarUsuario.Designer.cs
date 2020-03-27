@@ -102,21 +102,21 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(317, 61);
+            this.txt_nombre.Location = new System.Drawing.Point(353, 61);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(212, 20);
             this.txt_nombre.TabIndex = 7;
             // 
             // txt_apellido
             // 
-            this.txt_apellido.Location = new System.Drawing.Point(317, 118);
+            this.txt_apellido.Location = new System.Drawing.Point(353, 118);
             this.txt_apellido.Name = "txt_apellido";
             this.txt_apellido.Size = new System.Drawing.Size(212, 20);
             this.txt_apellido.TabIndex = 8;
             // 
             // txt_contraseña
             // 
-            this.txt_contraseña.Location = new System.Drawing.Point(317, 167);
+            this.txt_contraseña.Location = new System.Drawing.Point(353, 167);
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.Size = new System.Drawing.Size(212, 20);
             this.txt_contraseña.TabIndex = 9;
