@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Asistencia));
             this.lbl_codigo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_materia = new System.Windows.Forms.ComboBox();
@@ -37,31 +38,35 @@
             this.rbtn_entrada = new System.Windows.Forms.RadioButton();
             this.rbtn_salida = new System.Windows.Forms.RadioButton();
             this.panel_RegistrodeAsistencia = new System.Windows.Forms.Panel();
+            this.lbl_RegistroAsistencia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asistencia)).BeginInit();
+            this.panel_RegistrodeAsistencia.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_codigo
             // 
             this.lbl_codigo.AutoSize = true;
-            this.lbl_codigo.Location = new System.Drawing.Point(22, 96);
+            this.lbl_codigo.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigo.Location = new System.Drawing.Point(80, 87);
             this.lbl_codigo.Name = "lbl_codigo";
-            this.lbl_codigo.Size = new System.Drawing.Size(78, 13);
+            this.lbl_codigo.Size = new System.Drawing.Size(176, 27);
             this.lbl_codigo.TabIndex = 0;
             this.lbl_codigo.Text = "Codigo Alumno";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 150);
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(447, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(90, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Materia";
             // 
             // cmb_materia
             // 
             this.cmb_materia.FormattingEnabled = true;
-            this.cmb_materia.Location = new System.Drawing.Point(97, 142);
+            this.cmb_materia.Location = new System.Drawing.Point(556, 93);
             this.cmb_materia.Name = "cmb_materia";
             this.cmb_materia.Size = new System.Drawing.Size(121, 21);
             this.cmb_materia.TabIndex = 2;
@@ -69,24 +74,29 @@
             // dgv_asistencia
             // 
             this.dgv_asistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_asistencia.Location = new System.Drawing.Point(408, 154);
+            this.dgv_asistencia.Location = new System.Drawing.Point(64, 234);
             this.dgv_asistencia.Name = "dgv_asistencia";
-            this.dgv_asistencia.Size = new System.Drawing.Size(428, 266);
+            this.dgv_asistencia.Size = new System.Drawing.Size(833, 279);
             this.dgv_asistencia.TabIndex = 3;
             // 
             // txt_codigo
             // 
-            this.txt_codigo.Location = new System.Drawing.Point(118, 93);
+            this.txt_codigo.Location = new System.Drawing.Point(262, 87);
             this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(100, 20);
+            this.txt_codigo.Size = new System.Drawing.Size(128, 20);
             this.txt_codigo.TabIndex = 4;
+            this.txt_codigo.TabStop = false;
             this.txt_codigo.TextChanged += new System.EventHandler(this.txt_codigo_TextChanged);
             // 
             // btn_marcar
             // 
-            this.btn_marcar.Location = new System.Drawing.Point(542, 96);
+            this.btn_marcar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_marcar.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_marcar.Image = ((System.Drawing.Image)(resources.GetObject("btn_marcar.Image")));
+            this.btn_marcar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_marcar.Location = new System.Drawing.Point(604, 170);
             this.btn_marcar.Name = "btn_marcar";
-            this.btn_marcar.Size = new System.Drawing.Size(75, 23);
+            this.btn_marcar.Size = new System.Drawing.Size(184, 48);
             this.btn_marcar.TabIndex = 5;
             this.btn_marcar.Text = "Marcar";
             this.btn_marcar.UseVisualStyleBackColor = true;
@@ -94,9 +104,10 @@
             // rbtn_entrada
             // 
             this.rbtn_entrada.AutoSize = true;
-            this.rbtn_entrada.Location = new System.Drawing.Point(50, 250);
+            this.rbtn_entrada.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_entrada.Location = new System.Drawing.Point(287, 159);
             this.rbtn_entrada.Name = "rbtn_entrada";
-            this.rbtn_entrada.Size = new System.Drawing.Size(62, 17);
+            this.rbtn_entrada.Size = new System.Drawing.Size(115, 31);
             this.rbtn_entrada.TabIndex = 6;
             this.rbtn_entrada.TabStop = true;
             this.rbtn_entrada.Text = "Entrada";
@@ -105,9 +116,10 @@
             // rbtn_salida
             // 
             this.rbtn_salida.AutoSize = true;
-            this.rbtn_salida.Location = new System.Drawing.Point(164, 250);
+            this.rbtn_salida.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_salida.Location = new System.Drawing.Point(430, 159);
             this.rbtn_salida.Name = "rbtn_salida";
-            this.rbtn_salida.Size = new System.Drawing.Size(54, 17);
+            this.rbtn_salida.Size = new System.Drawing.Size(97, 31);
             this.rbtn_salida.TabIndex = 7;
             this.rbtn_salida.TabStop = true;
             this.rbtn_salida.Text = "Salida";
@@ -115,10 +127,24 @@
             // 
             // panel_RegistrodeAsistencia
             // 
-            this.panel_RegistrodeAsistencia.Location = new System.Drawing.Point(74, 13);
+            this.panel_RegistrodeAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
+            this.panel_RegistrodeAsistencia.Controls.Add(this.lbl_RegistroAsistencia);
+            this.panel_RegistrodeAsistencia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_RegistrodeAsistencia.Location = new System.Drawing.Point(0, 0);
             this.panel_RegistrodeAsistencia.Name = "panel_RegistrodeAsistencia";
-            this.panel_RegistrodeAsistencia.Size = new System.Drawing.Size(200, 100);
+            this.panel_RegistrodeAsistencia.Size = new System.Drawing.Size(950, 49);
             this.panel_RegistrodeAsistencia.TabIndex = 8;
+            // 
+            // lbl_RegistroAsistencia
+            // 
+            this.lbl_RegistroAsistencia.AutoSize = true;
+            this.lbl_RegistroAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_RegistroAsistencia.ForeColor = System.Drawing.Color.White;
+            this.lbl_RegistroAsistencia.Location = new System.Drawing.Point(208, 9);
+            this.lbl_RegistroAsistencia.Name = "lbl_RegistroAsistencia";
+            this.lbl_RegistroAsistencia.Size = new System.Drawing.Size(282, 31);
+            this.lbl_RegistroAsistencia.TabIndex = 0;
+            this.lbl_RegistroAsistencia.Text = "Registro de asistencia";
             // 
             // frm_Asistencia
             // 
@@ -140,6 +166,8 @@
             this.Text = "frm_Asistencia";
             this.Load += new System.EventHandler(this.frm_Asistencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asistencia)).EndInit();
+            this.panel_RegistrodeAsistencia.ResumeLayout(false);
+            this.panel_RegistrodeAsistencia.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +184,6 @@
         private System.Windows.Forms.RadioButton rbtn_entrada;
         private System.Windows.Forms.RadioButton rbtn_salida;
         private System.Windows.Forms.Panel panel_RegistrodeAsistencia;
+        private System.Windows.Forms.Label lbl_RegistroAsistencia;
     }
 }
