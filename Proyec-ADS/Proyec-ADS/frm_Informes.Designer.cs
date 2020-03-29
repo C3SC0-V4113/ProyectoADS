@@ -39,12 +39,12 @@
             this.dgv_detalleasistencia = new System.Windows.Forms.DataGridView();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.Panel_Informes = new System.Windows.Forms.Panel();
+            this.ptb_informes = new System.Windows.Forms.PictureBox();
             this.Lbl_informes = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_informes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalleasistencia)).BeginInit();
             this.Panel_Informes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_informes)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_fechainicial
@@ -131,7 +131,7 @@
             // Panel_Informes
             // 
             this.Panel_Informes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
-            this.Panel_Informes.Controls.Add(this.pictureBox1);
+            this.Panel_Informes.Controls.Add(this.ptb_informes);
             this.Panel_Informes.Controls.Add(this.Lbl_informes);
             this.Panel_Informes.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Informes.Location = new System.Drawing.Point(0, 0);
@@ -139,26 +139,26 @@
             this.Panel_Informes.Size = new System.Drawing.Size(950, 49);
             this.Panel_Informes.TabIndex = 9;
             // 
+            // ptb_informes
+            // 
+            this.ptb_informes.Image = ((System.Drawing.Image)(resources.GetObject("ptb_informes.Image")));
+            this.ptb_informes.Location = new System.Drawing.Point(71, 0);
+            this.ptb_informes.Name = "ptb_informes";
+            this.ptb_informes.Size = new System.Drawing.Size(124, 49);
+            this.ptb_informes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_informes.TabIndex = 1;
+            this.ptb_informes.TabStop = false;
+            // 
             // Lbl_informes
             // 
             this.Lbl_informes.AutoSize = true;
             this.Lbl_informes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_informes.ForeColor = System.Drawing.Color.White;
-            this.Lbl_informes.Location = new System.Drawing.Point(209, 9);
+            this.Lbl_informes.Location = new System.Drawing.Point(213, 9);
             this.Lbl_informes.Name = "Lbl_informes";
             this.Lbl_informes.Size = new System.Drawing.Size(120, 31);
             this.Lbl_informes.TabIndex = 0;
             this.Lbl_informes.Text = "Informes";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // frm_Informes
             // 
@@ -183,7 +183,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalleasistencia)).EndInit();
             this.Panel_Informes.ResumeLayout(false);
             this.Panel_Informes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_informes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +202,6 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Panel Panel_Informes;
         private System.Windows.Forms.Label Lbl_informes;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptb_informes;
     }
 }

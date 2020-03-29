@@ -26,5 +26,10 @@ namespace Proyec_ADS
         {
 
         }
+
+        private void ptb_RegistrodeAsistencia_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
