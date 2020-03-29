@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_contraseña = new System.Windows.Forms.Label();
             this.btn_iniciar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,10 +44,10 @@
             this.iconominimizar = new System.Windows.Forms.PictureBox();
             this.iconocerrar = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.txt_usuario = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -112,16 +111,6 @@
             this.label2.Size = new System.Drawing.Size(200, 24);
             this.label2.TabIndex = 31;
             this.label2.Text = "Sistema Automatizado ";
-            // 
-            // lbl_contraseña
-            // 
-            this.lbl_contraseña.AutoSize = true;
-            this.lbl_contraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_contraseña.Location = new System.Drawing.Point(25, 262);
-            this.lbl_contraseña.Name = "lbl_contraseña";
-            this.lbl_contraseña.Size = new System.Drawing.Size(61, 13);
-            this.lbl_contraseña.TabIndex = 26;
-            this.lbl_contraseña.Text = "Contraseña";
             // 
             // btn_iniciar
             // 
@@ -257,17 +246,6 @@
             this.label13.TabIndex = 40;
             this.label13.Text = "©";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(231, 476);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(145, 19);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "Derechos reservados";
-            // 
             // txt_contraseña
             // 
             this.txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -282,15 +260,16 @@
             this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Enter);
             this.txt_contraseña.Leave += new System.EventHandler(this.txt_contraseña_Leave);
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label10.Location = new System.Drawing.Point(89, 244);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(283, 13);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "______________________________________________";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(231, 476);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(145, 19);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Derechos reservados";
             // 
             // txt_usuario
             // 
@@ -304,6 +283,16 @@
             this.txt_usuario.Text = "Usuario";
             this.txt_usuario.Enter += new System.EventHandler(this.txt_usuario_Enter);
             this.txt_usuario.Leave += new System.EventHandler(this.txt_usuario_Leave);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label10.Location = new System.Drawing.Point(89, 244);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(283, 13);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "______________________________________________";
             // 
             // label9
             // 
@@ -332,7 +321,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(836, 497);
             this.Controls.Add(this.linklbl_olvido);
-            this.Controls.Add(this.lbl_contraseña);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -361,7 +349,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbl_contraseña;
         private System.Windows.Forms.Button btn_iniciar;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Label label6;
