@@ -156,6 +156,14 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            this.ptb_creacionusuarios.Image = global::Proyec_ADS.Properties.Resources.e2m2;
+            this.ptb_creacionusuarios.Location = new System.Drawing.Point(43, 0);
+            this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
+            this.ptb_creacionusuarios.Size = new System.Drawing.Size(94, 58);
+            this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_creacionusuarios.TabIndex = 1;
+            this.ptb_creacionusuarios.TabStop = false;
+            this.ptb_creacionusuarios.Click += new System.EventHandler(this.ptb_creacionusuarios_Click);
             // 
             // frm_creacionUsuarios
             // 
