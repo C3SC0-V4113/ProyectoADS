@@ -60,8 +60,8 @@ namespace Proyec_ADS
         //MÉTODO ERROR: GENERA EL MENSAJE CONTENIDO EN M, MOSTRÁNDOLO EN LBLERROR
         private void error(string m)
         {
-            lblerror.Text = "    " + m;
-            lblerror.Visible = true;
+            //lblerror.Text = "    " + m;
+            //lblerror.Visible = true;
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
@@ -81,10 +81,10 @@ namespace Proyec_ADS
 
 
 
-        private void btn_iniciar_Click(object sender, EventArgs e)
-        {
+        //private void btn_iniciar_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void label2_Click(object sender, EventArgs e)
         {
