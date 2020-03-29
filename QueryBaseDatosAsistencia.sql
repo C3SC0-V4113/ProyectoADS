@@ -9,11 +9,9 @@ GO
 --TABLA DOCENTE
 CREATE TABLE DOCENTES
 (
-CodDocente varchar(8) not null,
+CodDocente varchar(6) not null,
 NombreDocente varchar(50),
 ApellidoDocente varchar(50),
-Contraseña varchar(max),
-CorreoElectronico varchar(max),
 )
 --TABLA ESTUDIANTE
 CREATE TABLE ESTUDIANTES
@@ -21,12 +19,18 @@ CREATE TABLE ESTUDIANTES
 CodCarnet varchar(8) not null,
 NombreAlumno varchar(40),
 CorreoAlumno varchar(25),
+Becados varchar(30),
+Inscrito varchar(10),
+Solvente varchar(25),
+Matricula varchar(25),
+Carrera varchar(30),
+Estado varchar(30),
 )
 --TABLA ASIGNATURA
 CREATE TABLE ASIGNATURAS
 (
 CodGrupo varchar(8) not null,
-CodDocente varchar(8) not null,
+CodDocente varchar(6) not null,
 CodCarnet varchar(8) not null,
 )
 --TABLA ASISTENCIA
@@ -75,41 +79,3 @@ ALTER TABLE ASISTENCIAS
 ADD CONSTRAINT FK_CodGrupo
 FOREIGN KEY(CodGrupo)
 REFERENCES ASIGNATURAS(CodGrupo)
-
---Procedimientos
-create proc CrearDocente
-@CodDocente varchar(8),
-@NombreDocente varchar(50),
-@ApellidoDocente varchar(50),
-@Contraseña varchar(max),
-@CorreoElectronico varchar(max)
-as
-INSERT INTO DOCENTES VALUES(@CodDocente,@NombreDocente,@ApellidoDocente,@Contraseña,@CorreoElectronico)
-GO
-
-create proc EditarDocente
-@CodDocente varchar(8),
-@NombreDocente varchar(50),
-@ApellidoDocente varchar(50),
-@Contraseña varchar(max),
-@CorreoElectronico varchar(max)
-As
-UPDATE DOCENTES SET Contraseña=@Contraseña,NombreDocente=@NombreDocente,ApellidoDocente=@ApellidoDocente,CorreoElectronico=@CorreoElectronico
-where CodDocente=@CodDocente
-go
-
-create proc BuscarCodigoDocente
-@CodDocente varchar(8)
-as
-SELECT*FROM DOCENTES
-WHERE CodDocente=@CodDocente
-GO
-
---Pruebas
-exec CrearDocente 'VC190544','Francisco José','Valle Cornejo','ratchet00','frankjose00@gmail.com'
-
-exec EditarDocente 'VC190544','Cosme','Fulanito','betho00','vallecesco@gmail.com'
-
-exec BuscarCodigoDocente VC190544
-
-SELECT*FROM DOCENTES
