@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_guardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -147,6 +144,24 @@
         1DQYY0nRma/thODPaADMsQyXjDKFYkKfDfgkit/wdZftXbvKx/wi0n3s4zu0L0716F8Kv2d/gn8Efib4
         d8ZeF/8Agmn+1xpfiTwnqVvq+l3f/CS3s4trqCRZYnMcusNHIA6qSjqyMBhlIJBh/wCCfv7JHxz+NH/B
         dP49/tAeJPg340+FPgfxz4alttOPiowW83mmfTFjhIRm3OyWkrnZuVQAC2Su4A//2Q==
+</value>
+  </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ptb_creacionusuarios.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIQSURBVFhH7ZXBSwJBFMYXWTAI
+        Ys0OgtJB8SAqZGh005MHkTx4XQKxQ/gHhAcJBcFTh4xOHqKTSAqCRIcQxA4JEoonA2P/lGnfsruM49t1
+        CYMgF37szLfzvu8xM7AcIeRHpFKpe57nCZBOp++wNVZARTOm06nAcZykIjsoKPPZbLaH1ZiBimaoYVow
+        i4TVmIGKRoxGIxeEMKE00ng8PsBqjUBFI1qt1gmEMKE0UqfTOcZqjUBFMyCECmT53SMAXC7XOwQxwUq4
+        x+N5w2rMQMV1QJiKHg5ga9eBilZoNBr78Xj8MZFIPMAYW2MFVDRiPp/vdLvdo0qlct5ut3c1fTAY8KVS
+        6QK+LRYLnq5ZByqy5HK5a22b1S1Xtn04HB7Cd1YHCoXCFeuDgYosdrv9kwqgkWw22xe8GZ04nc4PzIsF
+        FVnkZyXAApYuJSrS1Ov1MzCDn04sFmNDVkgmk9pYajabp5gnDSrSRKPRJzAURZFEIhE9yIharaaPM5nM
+        LeZJg4o08qNs/2QyIaFQSDc3olwuk3w+r83XHoM+yGazN36//zUYDD4D4XC45/V6+2ACZhAOx6AaGyII
+        AnG73dpcAi+5tqf5QgZkrTQQCAReaKPfBLL+XgNwYXw+X9/hcEywok0A3pBBX069AY1qtSpixZsAvNm8
+        pQlQLBYvseJNAN5s3tIE2DawbWDbwLaBf9YA4b4BEoPOQHP7c5sAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

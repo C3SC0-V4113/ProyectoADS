@@ -44,20 +44,17 @@
             this.lbl_correo = new System.Windows.Forms.Label();
             this.txt_correo = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.Panel_CreacionUsuarios = new System.Windows.Forms.Panel();
+            this.ptb_creacionusuarios = new System.Windows.Forms.PictureBox();
             this.lbl_CreacionUsuarios = new System.Windows.Forms.Label();
             this.grb_Creaciondeusuarios = new System.Windows.Forms.GroupBox();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.ptb_creacionusuarios = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.Panel_CreacionUsuarios.SuspendLayout();
-            this.grb_Creaciondeusuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_verificarcontra
             // 
-            this.txt_verificarcontra.Location = new System.Drawing.Point(269, 272);
             this.txt_verificarcontra.Location = new System.Drawing.Point(689, 131);
             this.txt_verificarcontra.Name = "txt_verificarcontra";
             this.txt_verificarcontra.Size = new System.Drawing.Size(100, 20);
@@ -65,7 +62,6 @@
             // 
             // txt_contraseña
             // 
-            this.txt_contraseña.Location = new System.Drawing.Point(269, 232);
             this.txt_contraseña.Location = new System.Drawing.Point(616, 71);
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.Size = new System.Drawing.Size(100, 20);
@@ -95,9 +91,13 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(137, 331);
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(592, 282);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar.Size = new System.Drawing.Size(187, 62);
             this.btn_guardar.TabIndex = 16;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -115,22 +115,20 @@
             // lbl_verificacion
             // 
             this.lbl_verificacion.AutoSize = true;
-            this.lbl_verificacion.Location = new System.Drawing.Point(134, 272);
             this.lbl_verificacion.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_verificacion.Location = new System.Drawing.Point(455, 131);
             this.lbl_verificacion.Name = "lbl_verificacion";
-            this.lbl_verificacion.Size = new System.Drawing.Size(102, 13);
+            this.lbl_verificacion.Size = new System.Drawing.Size(228, 27);
             this.lbl_verificacion.TabIndex = 14;
             this.lbl_verificacion.Text = "Verificar Contraseña";
             // 
             // lbl_contraseña
             // 
             this.lbl_contraseña.AutoSize = true;
-            this.lbl_contraseña.Location = new System.Drawing.Point(134, 232);
             this.lbl_contraseña.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_contraseña.Location = new System.Drawing.Point(455, 64);
             this.lbl_contraseña.Name = "lbl_contraseña";
-            this.lbl_contraseña.Size = new System.Drawing.Size(61, 13);
+            this.lbl_contraseña.Size = new System.Drawing.Size(136, 27);
             this.lbl_contraseña.TabIndex = 13;
             this.lbl_contraseña.Text = "Contraseña";
             // 
@@ -171,6 +169,7 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
             // Panel_CreacionUsuarios
             // 
             this.Panel_CreacionUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
@@ -181,6 +180,17 @@
             this.Panel_CreacionUsuarios.Name = "Panel_CreacionUsuarios";
             this.Panel_CreacionUsuarios.Size = new System.Drawing.Size(950, 58);
             this.Panel_CreacionUsuarios.TabIndex = 22;
+            // 
+            // ptb_creacionusuarios
+            // 
+            this.ptb_creacionusuarios.Image = ((System.Drawing.Image)(resources.GetObject("ptb_creacionusuarios.Image")));
+            this.ptb_creacionusuarios.Location = new System.Drawing.Point(43, 0);
+            this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
+            this.ptb_creacionusuarios.Size = new System.Drawing.Size(94, 58);
+            this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_creacionusuarios.TabIndex = 1;
+            this.ptb_creacionusuarios.TabStop = false;
+            this.ptb_creacionusuarios.Click += new System.EventHandler(this.ptb_creacionusuarios_Click);
             // 
             // lbl_CreacionUsuarios
             // 
@@ -195,47 +205,12 @@
             // 
             // grb_Creaciondeusuarios
             // 
-            this.grb_Creaciondeusuarios.Controls.Add(this.lbl_CodigoUsuario);
-            this.grb_Creaciondeusuarios.Controls.Add(this.txt_codigo);
-            this.grb_Creaciondeusuarios.Controls.Add(this.btn_guardar);
-            this.grb_Creaciondeusuarios.Controls.Add(this.txt_verificarcontra);
-            this.grb_Creaciondeusuarios.Controls.Add(this.lbl_nombre);
-            this.grb_Creaciondeusuarios.Controls.Add(this.txt_contraseña);
-            this.grb_Creaciondeusuarios.Controls.Add(this.lbl_verificacion);
-            this.grb_Creaciondeusuarios.Controls.Add(this.txt_nombre);
-            this.grb_Creaciondeusuarios.Controls.Add(this.txt_apellido);
-            this.grb_Creaciondeusuarios.Controls.Add(this.lbl_apellido);
-            this.grb_Creaciondeusuarios.Controls.Add(this.lbl_contraseña);
             this.grb_Creaciondeusuarios.Location = new System.Drawing.Point(43, 64);
             this.grb_Creaciondeusuarios.Name = "grb_Creaciondeusuarios";
             this.grb_Creaciondeusuarios.Size = new System.Drawing.Size(884, 378);
             this.grb_Creaciondeusuarios.TabIndex = 23;
             this.grb_Creaciondeusuarios.TabStop = false;
             this.grb_Creaciondeusuarios.UseCompatibleTextRendering = true;
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
-            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar.Location = new System.Drawing.Point(592, 282);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(187, 62);
-            this.btn_guardar.TabIndex = 16;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            // 
-            // ptb_creacionusuarios
-            // 
-            this.ptb_creacionusuarios.Image = global::Proyec_ADS.Properties.Resources.e2m2;
-            this.ptb_creacionusuarios.Location = new System.Drawing.Point(43, 0);
-            this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
-            this.ptb_creacionusuarios.Size = new System.Drawing.Size(94, 58);
-            this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptb_creacionusuarios.TabIndex = 1;
-            this.ptb_creacionusuarios.TabStop = false;
-            this.ptb_creacionusuarios.Click += new System.EventHandler(this.ptb_creacionusuarios_Click);
             // 
             // frm_creacionUsuarios
             // 
@@ -255,20 +230,15 @@
             this.Controls.Add(this.lbl_contraseña);
             this.Controls.Add(this.lbl_nombre);
             this.Controls.Add(this.lbl_CodigoUsuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_creacionUsuarios";
-            this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.Controls.Add(this.grb_Creaciondeusuarios);
             this.Controls.Add(this.Panel_CreacionUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_creacionUsuarios";
             this.Text = "frm_creacionUsuarios";
             this.Load += new System.EventHandler(this.frm_creacionUsuarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.Panel_CreacionUsuarios.ResumeLayout(false);
             this.Panel_CreacionUsuarios.PerformLayout();
-            this.grb_Creaciondeusuarios.ResumeLayout(false);
-            this.grb_Creaciondeusuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

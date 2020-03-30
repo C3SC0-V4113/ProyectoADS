@@ -13,7 +13,7 @@ namespace Proyec_ADS
     public partial class frm_creacionUsuarios : Form
     {
         Docente profe = new Docente();
-
+ 
         public frm_creacionUsuarios()
         {
             InitializeComponent();
@@ -107,9 +107,5 @@ namespace Proyec_ADS
         {
 
         }
-
-        
-
-        
     }
 }
