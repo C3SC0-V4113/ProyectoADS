@@ -95,7 +95,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_asistencia.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_asistencia.Location = new System.Drawing.Point(64, 234);
+            this.dgv_asistencia.Location = new System.Drawing.Point(64, 216);
             this.dgv_asistencia.Name = "dgv_asistencia";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -105,7 +105,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_asistencia.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_asistencia.Size = new System.Drawing.Size(833, 279);
+            this.dgv_asistencia.Size = new System.Drawing.Size(625, 185);
             this.dgv_asistencia.TabIndex = 3;
             // 
             // txt_codigo
@@ -123,7 +123,7 @@
             this.btn_marcar.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_marcar.Image = ((System.Drawing.Image)(resources.GetObject("btn_marcar.Image")));
             this.btn_marcar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_marcar.Location = new System.Drawing.Point(604, 170);
+            this.btn_marcar.Location = new System.Drawing.Point(472, 147);
             this.btn_marcar.Name = "btn_marcar";
             this.btn_marcar.Size = new System.Drawing.Size(184, 48);
             this.btn_marcar.TabIndex = 5;
@@ -134,7 +134,7 @@
             // 
             this.rbtn_entrada.AutoSize = true;
             this.rbtn_entrada.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_entrada.Location = new System.Drawing.Point(283, 183);
+            this.rbtn_entrada.Location = new System.Drawing.Point(151, 160);
             this.rbtn_entrada.Name = "rbtn_entrada";
             this.rbtn_entrada.Size = new System.Drawing.Size(101, 28);
             this.rbtn_entrada.TabIndex = 6;
@@ -146,7 +146,7 @@
             // 
             this.rbtn_salida.AutoSize = true;
             this.rbtn_salida.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_salida.Location = new System.Drawing.Point(428, 183);
+            this.rbtn_salida.Location = new System.Drawing.Point(296, 160);
             this.rbtn_salida.Name = "rbtn_salida";
             this.rbtn_salida.Size = new System.Drawing.Size(86, 28);
             this.rbtn_salida.TabIndex = 7;

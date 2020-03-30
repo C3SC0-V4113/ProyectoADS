@@ -164,9 +164,9 @@ namespace Proyec_ADS
 
         private void btn_iniciar_Click_1(object sender, EventArgs e)
         {
-            //frm_cargando car = new frm_cargando();
-            //car.Visible = true;
-            //this.Visible = false;
+            frm_cargando car = new frm_cargando();
+            car.Visible = true;
+            this.Visible = false;
         }
     }
 }

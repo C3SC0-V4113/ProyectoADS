@@ -134,7 +134,7 @@
             this.cmb_carrera.FormattingEnabled = true;
             this.cmb_carrera.Location = new System.Drawing.Point(494, 135);
             this.cmb_carrera.Name = "cmb_carrera";
-            this.cmb_carrera.Size = new System.Drawing.Size(155, 21);
+            this.cmb_carrera.Size = new System.Drawing.Size(179, 21);
             this.cmb_carrera.TabIndex = 9;
             // 
             // PanelRegistroAlumnos
@@ -145,7 +145,7 @@
             this.PanelRegistroAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelRegistroAlumnos.Location = new System.Drawing.Point(0, 0);
             this.PanelRegistroAlumnos.Name = "PanelRegistroAlumnos";
-            this.PanelRegistroAlumnos.Size = new System.Drawing.Size(919, 49);
+            this.PanelRegistroAlumnos.Size = new System.Drawing.Size(950, 49);
             this.PanelRegistroAlumnos.TabIndex = 11;
             // 
             // Ptb_Estudiante
@@ -176,7 +176,7 @@
             this.btn_registraralumno.ForeColor = System.Drawing.Color.Black;
             this.btn_registraralumno.Image = ((System.Drawing.Image)(resources.GetObject("btn_registraralumno.Image")));
             this.btn_registraralumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registraralumno.Location = new System.Drawing.Point(592, 282);
+            this.btn_registraralumno.Location = new System.Drawing.Point(486, 188);
             this.btn_registraralumno.Name = "btn_registraralumno";
             this.btn_registraralumno.Size = new System.Drawing.Size(187, 62);
             this.btn_registraralumno.TabIndex = 10;
@@ -208,7 +208,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(919, 551);
+            this.ClientSize = new System.Drawing.Size(950, 551);
             this.Controls.Add(this.grb_Registrodealumnos);
             this.Controls.Add(this.PanelRegistroAlumnos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

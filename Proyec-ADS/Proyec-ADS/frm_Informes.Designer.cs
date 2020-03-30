@@ -71,7 +71,7 @@
             // 
             this.lbl_clase.AutoSize = true;
             this.lbl_clase.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clase.Location = new System.Drawing.Point(424, 79);
+            this.lbl_clase.Location = new System.Drawing.Point(451, 79);
             this.lbl_clase.Name = "lbl_clase";
             this.lbl_clase.Size = new System.Drawing.Size(49, 18);
             this.lbl_clase.TabIndex = 2;
@@ -94,7 +94,7 @@
             // cmb_clase
             // 
             this.cmb_clase.FormattingEnabled = true;
-            this.cmb_clase.Location = new System.Drawing.Point(479, 79);
+            this.cmb_clase.Location = new System.Drawing.Point(506, 79);
             this.cmb_clase.Name = "cmb_clase";
             this.cmb_clase.Size = new System.Drawing.Size(121, 21);
             this.cmb_clase.TabIndex = 5;
@@ -102,17 +102,17 @@
             // dgv_informes
             // 
             this.dgv_informes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_informes.Location = new System.Drawing.Point(21, 190);
+            this.dgv_informes.Location = new System.Drawing.Point(12, 212);
             this.dgv_informes.Name = "dgv_informes";
-            this.dgv_informes.Size = new System.Drawing.Size(411, 236);
+            this.dgv_informes.Size = new System.Drawing.Size(286, 186);
             this.dgv_informes.TabIndex = 6;
             // 
             // dgv_detalleasistencia
             // 
             this.dgv_detalleasistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_detalleasistencia.Location = new System.Drawing.Point(469, 190);
+            this.dgv_detalleasistencia.Location = new System.Drawing.Point(355, 212);
             this.dgv_detalleasistencia.Name = "dgv_detalleasistencia";
-            this.dgv_detalleasistencia.Size = new System.Drawing.Size(451, 236);
+            this.dgv_detalleasistencia.Size = new System.Drawing.Size(272, 186);
             this.dgv_detalleasistencia.TabIndex = 7;
             // 
             // btn_buscar
@@ -121,7 +121,7 @@
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
             this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscar.Location = new System.Drawing.Point(624, 121);
+            this.btn_buscar.Location = new System.Drawing.Point(458, 119);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(169, 63);
             this.btn_buscar.TabIndex = 8;

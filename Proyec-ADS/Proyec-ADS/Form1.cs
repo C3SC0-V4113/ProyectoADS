@@ -18,11 +18,27 @@ namespace Proyec_ADS
             personalizardiseño();
         }
 
+        private Form formactivo = null;
+        private void abrirFormsHijos(Form hijo)
+        {
+            if (formactivo != null)
+            {
+                formactivo.Close();
+            }
+            formactivo = hijo;
+            hijo.TopLevel = false;
+            hijo.FormBorderStyle = FormBorderStyle.None;
+            hijo.Dock = DockStyle.Fill;
+            panelProyeccion.Controls.Add(hijo);
+            panelProyeccion.Tag = hijo;
+            hijo.BringToFront();
+            hijo.Show();
+        }
+
         private void personalizardiseño()
         {
             panel_estudiantes.Visible = false;
             panel_asistencia.Visible = false;
-
         }
 
         private void ocultarsubmenu()
@@ -76,21 +92,25 @@ namespace Proyec_ADS
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
+            abrirFormsHijos(new frm_registroAlumnos());
             ocultarsubmenu();
         }
 
         private void btn_asistencia_Click(object sender, EventArgs e)
         {
+
             mostrarsubmenu(panel_asistencia);
         }
 
         private void btn_tomarasistencia_Click(object sender, EventArgs e)
         {
+            abrirFormsHijos(new frm_Asistencia());
             ocultarsubmenu();
         }
 
         private void btn_regasistencia_Click(object sender, EventArgs e)
         {
+            abrirFormsHijos(new frm_Informes());
             ocultarsubmenu();
         }
 
