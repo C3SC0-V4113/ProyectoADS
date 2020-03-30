@@ -197,9 +197,9 @@
             this.grb_Registrodealumnos.Controls.Add(this.lbl_apellido);
             this.grb_Registrodealumnos.Controls.Add(this.txt_apellido);
             this.grb_Registrodealumnos.Controls.Add(this.lbl_correo);
-            this.grb_Registrodealumnos.Location = new System.Drawing.Point(43, 64);
+            this.grb_Registrodealumnos.Location = new System.Drawing.Point(12, 69);
             this.grb_Registrodealumnos.Name = "grb_Registrodealumnos";
-            this.grb_Registrodealumnos.Size = new System.Drawing.Size(884, 378);
+            this.grb_Registrodealumnos.Size = new System.Drawing.Size(807, 378);
             this.grb_Registrodealumnos.TabIndex = 12;
             this.grb_Registrodealumnos.TabStop = false;
             // 
