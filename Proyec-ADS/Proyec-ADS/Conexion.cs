@@ -15,11 +15,6 @@ namespace Proyec_ADS
 
         private SqlConnection conexion = new SqlConnection("server=localhost;database=RegistroDeAsistencia;integrated security=true");
 
-        //public Conexion()
-        //{
-        //    conexion.ConnectionString = cadena;
-        //}
-
         public SqlConnection AbrirConexion()
         {
             if (conexion.State == ConnectionState.Closed)

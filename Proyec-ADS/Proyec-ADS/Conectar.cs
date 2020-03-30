@@ -25,8 +25,6 @@ namespace Proyec_ADS
             return new SqlConnection(conectionString);
         }
 
-
-
         //ABRIENDO CONEXION
         public SqlConnection AbrirConexion()
         {
@@ -67,7 +65,9 @@ namespace Proyec_ADS
                         return true;
                     }
                     else
+                    {
                         return false;
+                    }
                 }
 
             }
