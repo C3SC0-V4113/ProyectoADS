@@ -134,7 +134,7 @@
             // 
             this.rbtn_entrada.AutoSize = true;
             this.rbtn_entrada.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_entrada.Location = new System.Drawing.Point(283, 183);
+            this.rbtn_entrada.Location = new System.Drawing.Point(283, 170);
             this.rbtn_entrada.Name = "rbtn_entrada";
             this.rbtn_entrada.Size = new System.Drawing.Size(101, 28);
             this.rbtn_entrada.TabIndex = 6;
@@ -146,7 +146,7 @@
             // 
             this.rbtn_salida.AutoSize = true;
             this.rbtn_salida.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_salida.Location = new System.Drawing.Point(428, 183);
+            this.rbtn_salida.Location = new System.Drawing.Point(428, 170);
             this.rbtn_salida.Name = "rbtn_salida";
             this.rbtn_salida.Size = new System.Drawing.Size(86, 28);
             this.rbtn_salida.TabIndex = 7;

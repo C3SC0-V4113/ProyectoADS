@@ -71,7 +71,7 @@
             // 
             this.lbl_clase.AutoSize = true;
             this.lbl_clase.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clase.Location = new System.Drawing.Point(424, 79);
+            this.lbl_clase.Location = new System.Drawing.Point(621, 82);
             this.lbl_clase.Name = "lbl_clase";
             this.lbl_clase.Size = new System.Drawing.Size(49, 18);
             this.lbl_clase.TabIndex = 2;
@@ -79,14 +79,14 @@
             // 
             // dtp_fechainicial
             // 
-            this.dtp_fechainicial.Location = new System.Drawing.Point(147, 79);
+            this.dtp_fechainicial.Location = new System.Drawing.Point(166, 79);
             this.dtp_fechainicial.Name = "dtp_fechainicial";
             this.dtp_fechainicial.Size = new System.Drawing.Size(204, 20);
             this.dtp_fechainicial.TabIndex = 3;
             // 
             // dtp_fechafinal
             // 
-            this.dtp_fechafinal.Location = new System.Drawing.Point(151, 119);
+            this.dtp_fechafinal.Location = new System.Drawing.Point(166, 119);
             this.dtp_fechafinal.Name = "dtp_fechafinal";
             this.dtp_fechafinal.Size = new System.Drawing.Size(200, 20);
             this.dtp_fechafinal.TabIndex = 4;
@@ -94,7 +94,7 @@
             // cmb_clase
             // 
             this.cmb_clase.FormattingEnabled = true;
-            this.cmb_clase.Location = new System.Drawing.Point(479, 79);
+            this.cmb_clase.Location = new System.Drawing.Point(676, 82);
             this.cmb_clase.Name = "cmb_clase";
             this.cmb_clase.Size = new System.Drawing.Size(121, 21);
             this.cmb_clase.TabIndex = 5;
