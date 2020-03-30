@@ -1,4 +1,4 @@
-USE master
+ï»¿USE master
 GO
 CREATE DATABASE RegistroDeAsistencia
 GO
@@ -12,8 +12,9 @@ CREATE TABLE DOCENTES
 CodDocente varchar(8) not null,
 NombreDocente varchar(50),
 ApellidoDocente varchar(50),
-Contraseña varchar(max),
-CorreoElectronico varchar(max),
+ContraseÃ±a varchar(max) not null,
+CorreoElectronico varchar(max) not null,
+Usuario char(10) not null,
 )
 --TABLA ESTUDIANTE
 CREATE TABLE ESTUDIANTES
@@ -81,20 +82,22 @@ create proc CrearDocente
 @CodDocente varchar(8),
 @NombreDocente varchar(50),
 @ApellidoDocente varchar(50),
-@Contraseña varchar(max),
-@CorreoElectronico varchar(max)
+@ContraseÃ±a varchar(max),
+@CorreoElectronico varchar(max),
+@Usuario char(10)
 as
-INSERT INTO DOCENTES VALUES(@CodDocente,@NombreDocente,@ApellidoDocente,@Contraseña,@CorreoElectronico)
+INSERT INTO DOCENTES VALUES(@CodDocente,@NombreDocente,@ApellidoDocente,ENCRYPTBYPASSPHRASE('ContraseÃ±a',@ContraseÃ±a),@CorreoElectronico,@Usuario)
 GO
 
 create proc EditarDocente
 @CodDocente varchar(8),
 @NombreDocente varchar(50),
 @ApellidoDocente varchar(50),
-@Contraseña varchar(max),
-@CorreoElectronico varchar(max)
+@ContraseÃ±a varchar(max),
+@CorreoElectronico varchar(max),
+@Usuario char(10)
 As
-UPDATE DOCENTES SET Contraseña=@Contraseña,NombreDocente=@NombreDocente,ApellidoDocente=@ApellidoDocente,CorreoElectronico=@CorreoElectronico
+UPDATE DOCENTES SET ContraseÃ±a=@ContraseÃ±a,NombreDocente=@NombreDocente,ApellidoDocente=@ApellidoDocente,CorreoElectronico=@CorreoElectronico, Usuario=@Usuario
 where CodDocente=@CodDocente
 go
 
@@ -105,11 +108,14 @@ SELECT*FROM DOCENTES
 WHERE CodDocente=@CodDocente
 GO
 
---Pruebas
-exec CrearDocente 'VC190544','Francisco José','Valle Cornejo','ratchet00','frankjose00@gmail.com'
 
-exec EditarDocente 'VC190544','Cosme','Fulanito','betho00','vallecesco@gmail.com'
+--Pruebas
+exec CrearDocente 'VC190544','Francisco JosÃ©','Valle Cornejo','ratchet00','frankjose00@gmail.com','CESCO'
+
+exec EditarDocente 'VC190544','Cosme','Fulanito','betho00','vallecesco@gmail.com','VALLE'
 
 exec BuscarCodigoDocente VC190544
 
 SELECT*FROM DOCENTES
+exec CrearDocente 'DD102303','Carlos','MartéŸ“ez','seguro','pinochofino@gmail.com','Elprofe';
+select*from DOCENTES;
