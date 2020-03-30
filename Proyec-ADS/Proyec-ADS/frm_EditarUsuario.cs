@@ -55,7 +55,7 @@ namespace Proyec_ADS
             return validado;
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (Validar())
             {
