@@ -98,5 +98,18 @@ namespace Proyec_ADS
                 btn_guardar.Enabled = true;
             }
         }
+        private void frm_creacionUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ptb_creacionusuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        
     }
 }

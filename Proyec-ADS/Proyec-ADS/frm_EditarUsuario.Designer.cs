@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_EditarUsuario));
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.lbl_contraseña = new System.Windows.Forms.Label();
             this.lbl_verificacion = new System.Windows.Forms.Label();
@@ -42,12 +43,21 @@
             this.lbl_correo = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel_Editarusuarios = new System.Windows.Forms.Panel();
+            this.ptb_creacionusuarios = new System.Windows.Forms.PictureBox();
+            this.lbl_Editarusuario = new System.Windows.Forms.Label();
+            this.grb_Editarusuarios = new System.Windows.Forms.GroupBox();
+            this.panel_Editarusuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).BeginInit();
+            this.grb_Editarusuarios.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
             this.lbl_nombre.Location = new System.Drawing.Point(91, 97);
+            this.lbl_nombre.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre.Location = new System.Drawing.Point(106, 61);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.Size = new System.Drawing.Size(83, 13);
             this.lbl_nombre.TabIndex = 1;
@@ -75,6 +85,8 @@
             // 
             this.lbl_apellido.AutoSize = true;
             this.lbl_apellido.Location = new System.Drawing.Point(91, 143);
+            this.lbl_apellido.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apellido.Location = new System.Drawing.Point(106, 118);
             this.lbl_apellido.Name = "lbl_apellido";
             this.lbl_apellido.Size = new System.Drawing.Size(83, 13);
             this.lbl_apellido.TabIndex = 4;
@@ -88,11 +100,11 @@
             this.btn_guardar.TabIndex = 5;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // txt_nombre
             // 
             this.txt_nombre.Location = new System.Drawing.Point(226, 97);
+            this.txt_nombre.Location = new System.Drawing.Point(353, 61);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
             this.txt_nombre.TabIndex = 7;
@@ -100,6 +112,7 @@
             // txt_apellido
             // 
             this.txt_apellido.Location = new System.Drawing.Point(226, 143);
+            this.txt_apellido.Location = new System.Drawing.Point(353, 118);
             this.txt_apellido.Name = "txt_apellido";
             this.txt_apellido.Size = new System.Drawing.Size(100, 20);
             this.txt_apellido.TabIndex = 8;
@@ -137,6 +150,54 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // panel_Editarusuarios
+            // 
+            this.panel_Editarusuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
+            this.panel_Editarusuarios.Controls.Add(this.ptb_creacionusuarios);
+            this.panel_Editarusuarios.Controls.Add(this.lbl_Editarusuario);
+            this.panel_Editarusuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Editarusuarios.Location = new System.Drawing.Point(0, 0);
+            this.panel_Editarusuarios.Name = "panel_Editarusuarios";
+            this.panel_Editarusuarios.Size = new System.Drawing.Size(950, 58);
+            this.panel_Editarusuarios.TabIndex = 11;
+            // 
+            // ptb_creacionusuarios
+            // 
+            this.ptb_creacionusuarios.Image = ((System.Drawing.Image)(resources.GetObject("ptb_creacionusuarios.Image")));
+            this.ptb_creacionusuarios.Location = new System.Drawing.Point(43, 0);
+            this.ptb_creacionusuarios.Name = "ptb_creacionusuarios";
+            this.ptb_creacionusuarios.Size = new System.Drawing.Size(86, 58);
+            this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_creacionusuarios.TabIndex = 2;
+            this.ptb_creacionusuarios.TabStop = false;
+            // 
+            // lbl_Editarusuario
+            // 
+            this.lbl_Editarusuario.AutoSize = true;
+            this.lbl_Editarusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Editarusuario.ForeColor = System.Drawing.Color.White;
+            this.lbl_Editarusuario.Location = new System.Drawing.Point(239, 9);
+            this.lbl_Editarusuario.Name = "lbl_Editarusuario";
+            this.lbl_Editarusuario.Size = new System.Drawing.Size(200, 31);
+            this.lbl_Editarusuario.TabIndex = 0;
+            this.lbl_Editarusuario.Text = "Editar Usuarios";
+            // 
+            // grb_Editarusuarios
+            // 
+            this.grb_Editarusuarios.Controls.Add(this.lbl_nombre);
+            this.grb_Editarusuarios.Controls.Add(this.txt_nombre);
+            this.grb_Editarusuarios.Controls.Add(this.btn_guardar);
+            this.grb_Editarusuarios.Controls.Add(this.txt_verificarcontra);
+            this.grb_Editarusuarios.Controls.Add(this.lbl_apellido);
+            this.grb_Editarusuarios.Controls.Add(this.txt_contraseña);
+            this.grb_Editarusuarios.Controls.Add(this.lbl_verificacion);
+            this.grb_Editarusuarios.Controls.Add(this.txt_apellido);
+            this.grb_Editarusuarios.Controls.Add(this.lbl_contraseña);
+            this.grb_Editarusuarios.Location = new System.Drawing.Point(43, 64);
+            this.grb_Editarusuarios.Name = "grb_Editarusuarios";
+            this.grb_Editarusuarios.Size = new System.Drawing.Size(884, 378);
+            this.grb_Editarusuarios.TabIndex = 12;
+            this.grb_Editarusuarios.TabStop = false;
             // 
             // frm_EditarUsuario
             // 
@@ -158,6 +219,16 @@
             this.Name = "frm_EditarUsuario";
             this.Text = "frm_EditarUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.Controls.Add(this.grb_Editarusuarios);
+            this.Controls.Add(this.panel_Editarusuarios);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frm_EditarUsuario";
+            this.Text = "frm_EditarUsuario";
+            this.panel_Editarusuarios.ResumeLayout(false);
+            this.panel_Editarusuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_creacionusuarios)).EndInit();
+            this.grb_Editarusuarios.ResumeLayout(false);
+            this.grb_Editarusuarios.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +248,9 @@
         private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Label lbl_correo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel_Editarusuarios;
+        private System.Windows.Forms.Label lbl_Editarusuario;
+        private System.Windows.Forms.GroupBox grb_Editarusuarios;
+        private System.Windows.Forms.PictureBox ptb_creacionusuarios;
     }
 }
