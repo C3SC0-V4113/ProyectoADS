@@ -81,14 +81,12 @@ namespace Proyec_ADS
             if (lector.HasRows)
             {
                 comando.Parameters.Clear();
-                MessageBox.Show("Validado!");
                 conex.CerrarConexion();
                 return true;
             }
             else
             {
                 comando.Parameters.Clear();
-                MessageBox.Show("Neles pasteles");
                 conex.CerrarConexion();
                 return false;
             }
@@ -97,36 +95,90 @@ namespace Proyec_ADS
         //METODO PARA RECUPERAR CONTRASEÑA
         public string RecuperarContraseña(string userRequesting)
         {
+            string error="";
+            string correocensurado;
+            SoporteEmail servicio = new SoporteEmail();
             comando.Connection = conex.AbrirConexion();
-            comando.CommandText = "select NombreDocente,ApellidoDocente,Usuario,Email,Pass=CONVERT(nvarchar(100),DECRYPTBYPASSPHRASE('password',pass)) from DOCENTES where Usuario=@User or Email=@correo";
-            comando.Parameters.AddWithValue("@User", userRequesting);
-            comando.Parameters.AddWithValue("@correo", userRequesting);
-            comando.Parameters.AddWithValue("@contra", userRequesting);
-            comando.CommandType = CommandType.Text;
+            comando.CommandText = "RecuperarContraseña";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@Usuario", userRequesting);
             lector = comando.ExecuteReader();
-            if (lector.Read() == true)
+            if (lector.HasRows)
             {
-                string userName = lector.GetString(0) + " " + lector.GetString(1);
-                string userMail = lector.GetString(3);
-                string accountPassword = lector.GetString(4);
-                var mailService = new SoporteEmail();
-                mailService.sendMail(
-                  subject: "SARA-UDB: Recuperación de contraseña",
-                  body: "Hola, " + userName + " , recientemente solicitaste recuperar tu contraseña.\n" +
-                  "Tu contraseña actual es: " + accountPassword +
-                  "\nPor motivos de seguridad le recomendamos cambiar su contraseña una vez acceda el sistema (esto es opcional).",
-                  recipientMail: new List<string> { userMail }
-                  );
-                conex.CerrarConexion();
-                return "Hola, " + userName + ", recientemente solicitaste recuperar tu contraseña.\n" +
-                  "Por favor revisa tu correo." +
-                  "\nPor motivos de seguridad le recomendamos cambiar su contraseña una vez acceda el sistema (esto es opcional).";
+                try
+                {
+                    string Usuario;
+                    string contraseña;
+                    string Email;
+
+                    while (lector.Read())
+                    {
+                        Usuario = lector.GetString(0);
+                        contraseña = lector.GetString(1);
+                        Email = lector.GetString(2);
+                        MessageBox.Show(Usuario + " " + contraseña + " " + Email);
+                        string remitente = "SARA-UDB: Recuperación de contraseña";
+                        string Cuerpo = "Hola, " + Usuario + " , recientemente solicitaste recuperar tu contraseña.\n" + "Tu contraseña actual es: " + contraseña + "\nPor motivos de seguridad le recomendamos cambiar su contraseña una vez acceda el sistema (esto es opcional).";
+                        List<string> destinatario = new List<string> { Email };
+                        servicio.sendMail(remitente, Cuerpo, destinatario);
+                        correocensurado = CensurarCorreo(Email);
+                        error = "Se le ha enviado la contraseña al correo: \n" + correocensurado;
+                    }
+                    comando.Parameters.Clear();
+                    conex.CerrarConexion();
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    error = "Ha ocurrido un error al enviar el mensaje \n"+ex.Message;
+                    comando.Parameters.Clear();
+                    conex.CerrarConexion();
+                    return error;
+                }
             }
             else
             {
+                error = "No se ha encontrado ningun Usuario";
+                comando.Parameters.Clear();
                 conex.CerrarConexion();
-                return "Lo sentimos, no posee una cuenta de correo electrónico asociado a este usuario";
+                return error;
             }
+        }
+
+        //Metodo que censura el correo al que se envio la contraseña
+        private string CensurarCorreo(string correoE)
+        {
+            List<char> palabracensurada = new List<char>();
+            string mailCesnurado;
+            Console.WriteLine("Escriba la cadena");
+            int contador = 0;
+            bool correo = false;
+            foreach (char letra in correoE)
+            {
+                if (letra == char.Parse("@"))
+                {
+                    correo = true;
+                }
+                if ((contador == 0) || (contador == 1))
+                {
+                    palabracensurada.Add(letra);
+                }
+                else
+                {
+                    if (correo == false)
+                    {
+                        palabracensurada.Add(char.Parse("*"));
+                    }
+                    else
+                    {
+                        palabracensurada.Add(letra);
+                    }
+                }
+                contador++;
+            }
+            contador = 0;
+            mailCesnurado = string.Join("", palabracensurada.ToArray());
+            return mailCesnurado;
         }
     }
 }

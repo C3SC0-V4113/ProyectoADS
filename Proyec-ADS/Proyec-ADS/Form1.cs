@@ -15,6 +15,8 @@ namespace Proyec_ADS
         public frm_menu()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            abrirFormsHijos(new frm_bienvenida());
             personalizardiseño();
         }
 
@@ -116,8 +118,7 @@ namespace Proyec_ADS
 
         private void fecha_hora_Tick(object sender, EventArgs e)
         {
-            label_hora.Text = DateTime.Now.ToLongTimeString();
-            label_fecha.Text = DateTime.Now.ToLongDateString();
+
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
@@ -132,12 +133,11 @@ namespace Proyec_ADS
 
         private void iconocerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
         }
 
         private void iconominimizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+
         }
 
         private void btn_acercade_Click(object sender, EventArgs e)
@@ -145,5 +145,14 @@ namespace Proyec_ADS
 
         }
 
+        private void iconocerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconominimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

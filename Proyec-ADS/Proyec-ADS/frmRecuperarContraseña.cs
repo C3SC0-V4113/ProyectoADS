@@ -22,13 +22,8 @@ namespace Proyec_ADS
 
         }
 
-        Conexion conec = new Conexion();
         Docente doc = new Docente();
 
-        public string recoverPassword(string userRequesting)
-        {
-            return doc.RecuperarContraseña(userRequesting);
-        }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             
@@ -58,15 +53,9 @@ namespace Proyec_ADS
 
         private void btnEnviar_Click_1(object sender, EventArgs e)
         {
-            var result = doc.RecuperarContraseña(txtRecuperar.Text);
-            lblMensaje.Text = result;
-            if (lblMensaje.Text != null)
-            {
-                btnEnviar.Enabled = false;
-                btnAceptar.Visible = true;
-
-            }
-
+            string Mensaje;
+            Mensaje = doc.RecuperarContraseña(txtRecuperar.Text);
+            label1.Text = Mensaje;
         }
     }
 }

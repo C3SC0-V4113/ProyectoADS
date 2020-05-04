@@ -116,6 +116,13 @@ SELECT NombreDocente FROM DOCENTES
 WHERE Usuario=@Usuario AND Contraseña=@Contraseña
 GO
 
+create proc RecuperarContraseña
+@Usuario char(10)
+as
+SELECT Usuario, Contraseña,CorreoElectronico  FROM DOCENTES
+WHERE Usuario=@Usuario
+go
+
 --Pruebas
 exec CrearDocente 'VC190544','Francisco José','Valle Cornejo','ratchet00','frankjose00@gmail.com','CESCO'
 
@@ -128,3 +135,8 @@ exec InicioSesion 'VALLE','betho00'
 exec CrearDocente 'DD102303','Carlos','Martínez','seguro','pinochofino@gmail.com','Elprofe';
 select*from DOCENTES;
 DELETE DOCENTES
+
+exec RecuperarContraseña VALLE
+
+SELECT Usuario, Contraseña,CorreoElectronico  FROM DOCENTES
+WHERE CodDocente='vc190544'

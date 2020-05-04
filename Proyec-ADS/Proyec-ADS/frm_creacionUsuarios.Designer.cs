@@ -233,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 551);
+            this.ClientSize = new System.Drawing.Size(950, 600);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.grb_Creaciondeusuarios);
             this.Controls.Add(this.Panel_CreacionUsuarios);
