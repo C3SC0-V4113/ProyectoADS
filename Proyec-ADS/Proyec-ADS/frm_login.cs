@@ -17,44 +17,23 @@ namespace Proyec_ADS
             InitializeComponent();
         }
 
+        Docente docente = new Docente();
 
-
-        Conectar con = new Conectar();
         public bool ValidarLogin(string uss, string pass)
         {
-            return con.Login(uss, pass);
+            return docente.Login(uss, pass);
         }
 
         private void btn_iniciar_Click(object sender, EventArgs e)
         {
-            if (txt_usuario.Text != "Usuario")
-            {
+        }
 
-                if (txt_contraseña.Text != "Contraseña")
-                {
-
-                    var valido = ValidarLogin(txt_usuario.Text, txt_contraseña.Text);
-                    if (valido == true)
-                    {
-                        frm_menu m = new frm_menu();
-                        m.Visible = true;
-                        this.Visible = false;
-
-                    }
-                    else
-                    {
-                        error("Usuario y/o Contraseña inválidos");
-                        txt_usuario.Clear();
-                        txt_contraseña.Clear();
-                        txt_usuario.Focus();
-                    }
-                }
-                else error("Por favor ingrese la contraseña");
-            }
-            else
-            { error("Por favor ingrese el usuario"); }
-           
-           
+        public void LogOut(object sender, FormClosedEventArgs e)
+        {
+            txt_usuario.Clear();
+            txt_contraseña.Clear();
+            txt_usuario.Focus();
+            this.Show();
         }
 
         //MÉTODO ERROR: GENERA EL MENSAJE CONTENIDO EN M, MOSTRÁNDOLO EN LBLERROR
@@ -74,41 +53,14 @@ namespace Proyec_ADS
             frmRecuperarContraseña rec = new frmRecuperarContraseña();
             rec.Visible = true;
             this.Visible = false;
-
-        }
-
-        
-
-
-
-        //private void btn_iniciar_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frm_login_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void txt_usuario_Enter(object sender, EventArgs e)
         {
             if (txt_usuario.Text == "Usuario")
             {
-
                 txt_usuario.Text = "";
                 txt_usuario.ForeColor = Color.Black;
-
             }
         }
 
@@ -116,10 +68,8 @@ namespace Proyec_ADS
         {
             if (txt_usuario.Text == "")
             {
-
                 txt_usuario.Text = "Usuario";
                 txt_usuario.ForeColor = Color.DimGray;
-
             }
         }
 
@@ -127,10 +77,8 @@ namespace Proyec_ADS
         {
             if (txt_contraseña.Text == "*********")
             {
-
                 txt_contraseña.Text = "";
                 txt_contraseña.ForeColor = Color.Black;
-
             }
 
         }
@@ -139,16 +87,9 @@ namespace Proyec_ADS
         {
             if (txt_contraseña.Text == "")
             {
-
                 txt_contraseña.Text = "*********";
                 txt_contraseña.ForeColor = Color.DimGray;
-
             }
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -164,9 +105,22 @@ namespace Proyec_ADS
 
         private void btn_iniciar_Click_1(object sender, EventArgs e)
         {
-            frm_cargando car = new frm_cargando();
-            car.Visible = true;
-            this.Visible = false;
+            bool valido = ValidarLogin(txt_usuario.Text, txt_contraseña.Text);
+            if (valido == true)
+            {
+                frm_cargando m = new frm_cargando();
+                frm_menu menu = new frm_menu();
+                m.Show();
+                menu.FormClosed += LogOut;
+                this.Hide();
+            }
+            else
+            {
+                error("Usuario y/o Contraseña inválidos");
+                txt_usuario.Clear();
+                txt_contraseña.Clear();
+                txt_usuario.Focus();
+            }
         }
     }
 }

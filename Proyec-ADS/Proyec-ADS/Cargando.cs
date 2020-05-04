@@ -30,8 +30,8 @@ namespace Proyec_ADS
             {
                 timer1.Stop();
                 frm_menu m = new frm_menu();
-                m.Visible = true;
-                this.Visible = false;
+                m.Show();
+                this.Close();
             }
         }
 

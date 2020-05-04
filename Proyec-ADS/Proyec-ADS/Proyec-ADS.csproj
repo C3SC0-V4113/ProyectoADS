@@ -50,7 +50,6 @@
     <Compile Include="Cargando.Designer.cs">
       <DependentUpon>Cargando.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conectar.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Docente.cs" />
     <Compile Include="Form1.cs">

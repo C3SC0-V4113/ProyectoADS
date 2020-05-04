@@ -86,7 +86,7 @@ create proc CrearDocente
 @CorreoElectronico varchar(max),
 @Usuario char(10)
 as
-INSERT INTO DOCENTES VALUES(@CodDocente,@NombreDocente,@ApellidoDocente,ENCRYPTBYPASSPHRASE('Contraseña',@Contraseña),@CorreoElectronico,@Usuario)
+INSERT INTO DOCENTES VALUES(@CodDocente,@NombreDocente,@ApellidoDocente,@Contraseña,@CorreoElectronico,@Usuario)
 GO
 
 create proc EditarDocente
@@ -108,6 +108,13 @@ SELECT*FROM DOCENTES
 WHERE CodDocente=@CodDocente
 GO
 
+create proc InicioSesion
+@Usuario char(10),
+@Contraseña varchar(max)
+as
+SELECT NombreDocente FROM DOCENTES
+WHERE Usuario=@Usuario AND Contraseña=@Contraseña
+GO
 
 --Pruebas
 exec CrearDocente 'VC190544','Francisco José','Valle Cornejo','ratchet00','frankjose00@gmail.com','CESCO'
@@ -116,6 +123,8 @@ exec EditarDocente 'VC190544','Cosme','Fulanito','betho00','vallecesco@gmail.com
 
 exec BuscarCodigoDocente VC190544
 
-SELECT*FROM DOCENTES
-exec CrearDocente 'DD102303','Carlos','Mart韓ez','seguro','pinochofino@gmail.com','Elprofe';
+exec InicioSesion 'VALLE','betho00'
+
+exec CrearDocente 'DD102303','Carlos','Martínez','seguro','pinochofino@gmail.com','Elprofe';
 select*from DOCENTES;
+DELETE DOCENTES

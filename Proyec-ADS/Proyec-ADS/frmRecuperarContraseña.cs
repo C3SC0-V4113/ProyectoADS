@@ -22,11 +22,12 @@ namespace Proyec_ADS
 
         }
 
-        Conectar conec = new Conectar();
+        Conexion conec = new Conexion();
+        Docente doc = new Docente();
 
         public string recoverPassword(string userRequesting)
         {
-            return conec.recoverPassword(userRequesting);
+            return doc.RecuperarContraseña(userRequesting);
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
@@ -57,9 +58,8 @@ namespace Proyec_ADS
 
         private void btnEnviar_Click_1(object sender, EventArgs e)
         {
-            var result = conec.recoverPassword(txtRecuperar.Text);
+            var result = doc.RecuperarContraseña(txtRecuperar.Text);
             lblMensaje.Text = result;
-
             if (lblMensaje.Text != null)
             {
                 btnEnviar.Enabled = false;

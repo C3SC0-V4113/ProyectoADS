@@ -88,7 +88,7 @@
             this.label3.Size = new System.Drawing.Size(32, 24);
             this.label3.TabIndex = 21;
             this.label3.Text = "de";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -209,7 +209,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 503);
             this.panel1.TabIndex = 20;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // iconominimizar
             // 
@@ -330,7 +330,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_login";
             this.Text = "frm_login";
-            this.Load += new System.EventHandler(this.frm_login_Load);
+            //this.Load += new System.EventHandler(this.frm_login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).EndInit();

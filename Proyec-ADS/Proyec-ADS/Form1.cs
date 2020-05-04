@@ -124,6 +124,8 @@ namespace Proyec_ADS
         {
             if (MessageBox.Show("¿Estás seguro de cerrar sesión?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                frm_login log = new frm_login();
+                this.FormClosed += log.LogOut;
                 this.Close();
             }
         }
