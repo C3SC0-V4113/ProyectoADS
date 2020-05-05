@@ -117,7 +117,7 @@
             this.txt_codigo.Size = new System.Drawing.Size(185, 32);
             this.txt_codigo.TabIndex = 4;
             this.txt_codigo.TabStop = false;
-            this.txt_codigo.TextChanged += new System.EventHandler(this.txt_codigo_TextChanged);
+            //this.txt_codigo.TextChanged += new System.EventHandler(this.txt_codigo_TextChanged);
             // 
             // btn_marcar
             // 
@@ -176,7 +176,7 @@
             this.ptb_RegistrodeAsistencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptb_RegistrodeAsistencia.TabIndex = 1;
             this.ptb_RegistrodeAsistencia.TabStop = false;
-            this.ptb_RegistrodeAsistencia.Click += new System.EventHandler(this.ptb_RegistrodeAsistencia_Click);
+            //this.ptb_RegistrodeAsistencia.Click += new System.EventHandler(this.ptb_RegistrodeAsistencia_Click);
             // 
             // lbl_RegistroAsistencia
             // 
@@ -207,7 +207,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Asistencia";
             this.Text = "frm_Asistencia";
-            this.Load += new System.EventHandler(this.frm_Asistencia_Load);
+            //this.Load += new System.EventHandler(this.frm_Asistencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asistencia)).EndInit();
             this.panel_RegistrodeAsistencia.ResumeLayout(false);
             this.panel_RegistrodeAsistencia.PerformLayout();

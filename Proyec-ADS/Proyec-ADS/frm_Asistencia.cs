@@ -17,20 +17,5 @@ namespace Proyec_ADS
             InitializeComponent();
             MessageBox.Show(this.Width + ", " + this.Height);
         }
-
-        private void txt_codigo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frm_Asistencia_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ptb_RegistrodeAsistencia_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
