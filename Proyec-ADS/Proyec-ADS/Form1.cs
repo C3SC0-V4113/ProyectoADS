@@ -21,6 +21,7 @@ namespace Proyec_ADS
         }
 
         private Form formactivo = null;
+
         private void abrirFormsHijos(Form hijo)
         {
             if (formactivo != null)
@@ -29,6 +30,7 @@ namespace Proyec_ADS
             }
             formactivo = hijo;
             hijo.TopLevel = false;
+            hijo.AutoScroll = true;
             hijo.FormBorderStyle = FormBorderStyle.None;
             hijo.Dock = DockStyle.Fill;
             panelProyeccion.Controls.Add(hijo);
@@ -62,29 +64,9 @@ namespace Proyec_ADS
                 submenu.Visible = false;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel_logo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btn_consulta_Click(object sender, EventArgs e)
         {
             ocultarsubmenu();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btn_estudiantes_Click(object sender, EventArgs e)
@@ -100,7 +82,6 @@ namespace Proyec_ADS
 
         private void btn_asistencia_Click(object sender, EventArgs e)
         {
-
             mostrarsubmenu(panel_asistencia);
         }
 
@@ -116,11 +97,6 @@ namespace Proyec_ADS
             ocultarsubmenu();
         }
 
-        private void fecha_hora_Tick(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_salir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Estás seguro de cerrar sesión?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -129,15 +105,6 @@ namespace Proyec_ADS
                 this.FormClosed += log.LogOut;
                 this.Close();
             }
-        }
-
-        private void iconocerrar_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void iconominimizar_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_acercade_Click(object sender, EventArgs e)

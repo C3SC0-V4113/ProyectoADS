@@ -52,7 +52,7 @@
             // 
             this.lbl_codigo.AutoSize = true;
             this.lbl_codigo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo.Location = new System.Drawing.Point(80, 87);
+            this.lbl_codigo.Location = new System.Drawing.Point(93, 89);
             this.lbl_codigo.Name = "lbl_codigo";
             this.lbl_codigo.Size = new System.Drawing.Size(148, 24);
             this.lbl_codigo.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(448, 86);
+            this.label1.Location = new System.Drawing.Point(534, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 24);
             this.label1.TabIndex = 1;
@@ -70,10 +70,11 @@
             // 
             // cmb_materia
             // 
+            this.cmb_materia.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_materia.FormattingEnabled = true;
-            this.cmb_materia.Location = new System.Drawing.Point(535, 89);
+            this.cmb_materia.Location = new System.Drawing.Point(635, 86);
             this.cmb_materia.Name = "cmb_materia";
-            this.cmb_materia.Size = new System.Drawing.Size(121, 21);
+            this.cmb_materia.Size = new System.Drawing.Size(183, 32);
             this.cmb_materia.TabIndex = 2;
             // 
             // dgv_asistencia
@@ -95,7 +96,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_asistencia.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_asistencia.Location = new System.Drawing.Point(64, 216);
+            this.dgv_asistencia.Location = new System.Drawing.Point(74, 214);
             this.dgv_asistencia.Name = "dgv_asistencia";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -105,14 +106,15 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_asistencia.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_asistencia.Size = new System.Drawing.Size(625, 185);
+            this.dgv_asistencia.Size = new System.Drawing.Size(802, 331);
             this.dgv_asistencia.TabIndex = 3;
             // 
             // txt_codigo
             // 
-            this.txt_codigo.Location = new System.Drawing.Point(244, 91);
+            this.txt_codigo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codigo.Location = new System.Drawing.Point(272, 86);
             this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(128, 20);
+            this.txt_codigo.Size = new System.Drawing.Size(185, 32);
             this.txt_codigo.TabIndex = 4;
             this.txt_codigo.TabStop = false;
             this.txt_codigo.TextChanged += new System.EventHandler(this.txt_codigo_TextChanged);
@@ -120,10 +122,10 @@
             // btn_marcar
             // 
             this.btn_marcar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_marcar.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_marcar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_marcar.Image = ((System.Drawing.Image)(resources.GetObject("btn_marcar.Image")));
             this.btn_marcar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_marcar.Location = new System.Drawing.Point(472, 147);
+            this.btn_marcar.Location = new System.Drawing.Point(634, 150);
             this.btn_marcar.Name = "btn_marcar";
             this.btn_marcar.Size = new System.Drawing.Size(184, 48);
             this.btn_marcar.TabIndex = 5;
@@ -134,7 +136,7 @@
             // 
             this.rbtn_entrada.AutoSize = true;
             this.rbtn_entrada.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_entrada.Location = new System.Drawing.Point(151, 160);
+            this.rbtn_entrada.Location = new System.Drawing.Point(173, 160);
             this.rbtn_entrada.Name = "rbtn_entrada";
             this.rbtn_entrada.Size = new System.Drawing.Size(101, 28);
             this.rbtn_entrada.TabIndex = 6;
@@ -146,7 +148,7 @@
             // 
             this.rbtn_salida.AutoSize = true;
             this.rbtn_salida.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_salida.Location = new System.Drawing.Point(296, 160);
+            this.rbtn_salida.Location = new System.Drawing.Point(342, 160);
             this.rbtn_salida.Name = "rbtn_salida";
             this.rbtn_salida.Size = new System.Drawing.Size(86, 28);
             this.rbtn_salida.TabIndex = 7;
@@ -156,7 +158,7 @@
             // 
             // panel_RegistrodeAsistencia
             // 
-            this.panel_RegistrodeAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
+            this.panel_RegistrodeAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(229)))));
             this.panel_RegistrodeAsistencia.Controls.Add(this.ptb_RegistrodeAsistencia);
             this.panel_RegistrodeAsistencia.Controls.Add(this.lbl_RegistroAsistencia);
             this.panel_RegistrodeAsistencia.Dock = System.Windows.Forms.DockStyle.Top;

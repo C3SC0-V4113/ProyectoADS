@@ -52,10 +52,10 @@
             // lbl_Carnet
             // 
             this.lbl_Carnet.AutoSize = true;
-            this.lbl_Carnet.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Carnet.Location = new System.Drawing.Point(52, 63);
+            this.lbl_Carnet.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Carnet.Location = new System.Drawing.Point(65, 85);
             this.lbl_Carnet.Name = "lbl_Carnet";
-            this.lbl_Carnet.Size = new System.Drawing.Size(84, 27);
+            this.lbl_Carnet.Size = new System.Drawing.Size(73, 24);
             this.lbl_Carnet.TabIndex = 0;
             this.lbl_Carnet.Text = "Carnet";
             this.lbl_Carnet.Click += new System.EventHandler(this.lbl_Carnet_Click);
@@ -63,78 +63,82 @@
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre.Location = new System.Drawing.Point(52, 150);
+            this.lbl_nombre.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre.Location = new System.Drawing.Point(65, 172);
             this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(97, 27);
+            this.lbl_nombre.Size = new System.Drawing.Size(82, 24);
             this.lbl_nombre.TabIndex = 1;
             this.lbl_nombre.Text = "Nombre";
             // 
             // lbl_apellido
             // 
             this.lbl_apellido.AutoSize = true;
-            this.lbl_apellido.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellido.Location = new System.Drawing.Point(52, 223);
+            this.lbl_apellido.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apellido.Location = new System.Drawing.Point(65, 258);
             this.lbl_apellido.Name = "lbl_apellido";
-            this.lbl_apellido.Size = new System.Drawing.Size(98, 27);
+            this.lbl_apellido.Size = new System.Drawing.Size(82, 24);
             this.lbl_apellido.TabIndex = 2;
             this.lbl_apellido.Text = "Apellido";
             // 
             // lbl_correo
             // 
             this.lbl_correo.AutoSize = true;
-            this.lbl_correo.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_correo.Location = new System.Drawing.Point(396, 63);
+            this.lbl_correo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_correo.Location = new System.Drawing.Point(416, 85);
             this.lbl_correo.Name = "lbl_correo";
-            this.lbl_correo.Size = new System.Drawing.Size(84, 27);
+            this.lbl_correo.Size = new System.Drawing.Size(75, 24);
             this.lbl_correo.TabIndex = 3;
             this.lbl_correo.Text = "Correo";
             // 
             // lbl_carrera
             // 
             this.lbl_carrera.AutoSize = true;
-            this.lbl_carrera.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_carrera.Location = new System.Drawing.Point(396, 128);
+            this.lbl_carrera.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_carrera.Location = new System.Drawing.Point(416, 172);
             this.lbl_carrera.Name = "lbl_carrera";
-            this.lbl_carrera.Size = new System.Drawing.Size(92, 27);
+            this.lbl_carrera.Size = new System.Drawing.Size(82, 24);
             this.lbl_carrera.TabIndex = 4;
             this.lbl_carrera.Text = "Carrera";
             // 
             // txt_carnet
             // 
-            this.txt_carnet.Location = new System.Drawing.Point(154, 70);
+            this.txt_carnet.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_carnet.Location = new System.Drawing.Point(167, 82);
             this.txt_carnet.Name = "txt_carnet";
-            this.txt_carnet.Size = new System.Drawing.Size(166, 20);
+            this.txt_carnet.Size = new System.Drawing.Size(166, 32);
             this.txt_carnet.TabIndex = 5;
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(154, 157);
+            this.txt_nombre.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre.Location = new System.Drawing.Point(167, 169);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(178, 20);
+            this.txt_nombre.Size = new System.Drawing.Size(178, 32);
             this.txt_nombre.TabIndex = 6;
             // 
             // txt_apellido
             // 
-            this.txt_apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellido.Location = new System.Drawing.Point(154, 225);
+            this.txt_apellido.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido.Location = new System.Drawing.Point(167, 255);
             this.txt_apellido.Name = "txt_apellido";
-            this.txt_apellido.Size = new System.Drawing.Size(177, 26);
+            this.txt_apellido.Size = new System.Drawing.Size(177, 32);
             this.txt_apellido.TabIndex = 7;
             // 
             // txt_correo
             // 
-            this.txt_correo.Location = new System.Drawing.Point(494, 70);
+            this.txt_correo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_correo.Location = new System.Drawing.Point(523, 82);
             this.txt_correo.Name = "txt_correo";
-            this.txt_correo.Size = new System.Drawing.Size(179, 20);
+            this.txt_correo.Size = new System.Drawing.Size(179, 32);
             this.txt_correo.TabIndex = 8;
             // 
             // cmb_carrera
             // 
+            this.cmb_carrera.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera.FormattingEnabled = true;
-            this.cmb_carrera.Location = new System.Drawing.Point(494, 135);
+            this.cmb_carrera.Location = new System.Drawing.Point(523, 169);
             this.cmb_carrera.Name = "cmb_carrera";
-            this.cmb_carrera.Size = new System.Drawing.Size(179, 21);
+            this.cmb_carrera.Size = new System.Drawing.Size(179, 32);
             this.cmb_carrera.TabIndex = 9;
             // 
             // PanelRegistroAlumnos
@@ -151,7 +155,7 @@
             // Ptb_Estudiante
             // 
             this.Ptb_Estudiante.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_Estudiante.Image")));
-            this.Ptb_Estudiante.Location = new System.Drawing.Point(133, 3);
+            this.Ptb_Estudiante.Location = new System.Drawing.Point(32, 3);
             this.Ptb_Estudiante.Name = "Ptb_Estudiante";
             this.Ptb_Estudiante.Size = new System.Drawing.Size(100, 44);
             this.Ptb_Estudiante.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +167,7 @@
             this.lbl_RegAlumnos.AutoSize = true;
             this.lbl_RegAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_RegAlumnos.ForeColor = System.Drawing.Color.White;
-            this.lbl_RegAlumnos.Location = new System.Drawing.Point(239, 9);
+            this.lbl_RegAlumnos.Location = new System.Drawing.Point(138, 9);
             this.lbl_RegAlumnos.Name = "lbl_RegAlumnos";
             this.lbl_RegAlumnos.Size = new System.Drawing.Size(265, 31);
             this.lbl_RegAlumnos.TabIndex = 0;
@@ -172,11 +176,11 @@
             // btn_registraralumno
             // 
             this.btn_registraralumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registraralumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registraralumno.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_registraralumno.ForeColor = System.Drawing.Color.Black;
             this.btn_registraralumno.Image = ((System.Drawing.Image)(resources.GetObject("btn_registraralumno.Image")));
             this.btn_registraralumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registraralumno.Location = new System.Drawing.Point(486, 188);
+            this.btn_registraralumno.Location = new System.Drawing.Point(451, 239);
             this.btn_registraralumno.Name = "btn_registraralumno";
             this.btn_registraralumno.Size = new System.Drawing.Size(187, 62);
             this.btn_registraralumno.TabIndex = 10;
@@ -186,6 +190,7 @@
             // 
             // grb_Registrodealumnos
             // 
+            this.grb_Registrodealumnos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.grb_Registrodealumnos.Controls.Add(this.lbl_Carnet);
             this.grb_Registrodealumnos.Controls.Add(this.txt_carnet);
             this.grb_Registrodealumnos.Controls.Add(this.btn_registraralumno);
@@ -197,9 +202,9 @@
             this.grb_Registrodealumnos.Controls.Add(this.lbl_apellido);
             this.grb_Registrodealumnos.Controls.Add(this.txt_apellido);
             this.grb_Registrodealumnos.Controls.Add(this.lbl_correo);
-            this.grb_Registrodealumnos.Location = new System.Drawing.Point(12, 69);
+            this.grb_Registrodealumnos.Location = new System.Drawing.Point(75, 96);
             this.grb_Registrodealumnos.Name = "grb_Registrodealumnos";
-            this.grb_Registrodealumnos.Size = new System.Drawing.Size(807, 378);
+            this.grb_Registrodealumnos.Size = new System.Drawing.Size(807, 394);
             this.grb_Registrodealumnos.TabIndex = 12;
             this.grb_Registrodealumnos.TabStop = false;
             // 

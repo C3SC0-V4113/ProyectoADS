@@ -56,37 +56,42 @@
             // 
             // txt_verificarcontra
             // 
-            this.txt_verificarcontra.Location = new System.Drawing.Point(636, 133);
+            this.txt_verificarcontra.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_verificarcontra.Location = new System.Drawing.Point(654, 132);
             this.txt_verificarcontra.Name = "txt_verificarcontra";
-            this.txt_verificarcontra.Size = new System.Drawing.Size(100, 20);
+            this.txt_verificarcontra.Size = new System.Drawing.Size(171, 32);
             this.txt_verificarcontra.TabIndex = 21;
             // 
             // txt_contraseña
             // 
-            this.txt_contraseña.Location = new System.Drawing.Point(636, 70);
+            this.txt_contraseña.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contraseña.Location = new System.Drawing.Point(654, 75);
             this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(100, 20);
+            this.txt_contraseña.Size = new System.Drawing.Size(171, 32);
             this.txt_contraseña.TabIndex = 20;
             // 
             // txt_apellido
             // 
-            this.txt_apellido.Location = new System.Drawing.Point(250, 150);
+            this.txt_apellido.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido.Location = new System.Drawing.Point(249, 191);
             this.txt_apellido.Name = "txt_apellido";
-            this.txt_apellido.Size = new System.Drawing.Size(100, 20);
+            this.txt_apellido.Size = new System.Drawing.Size(163, 32);
             this.txt_apellido.TabIndex = 19;
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(250, 104);
+            this.txt_nombre.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre.Location = new System.Drawing.Point(249, 129);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
+            this.txt_nombre.Size = new System.Drawing.Size(163, 32);
             this.txt_nombre.TabIndex = 18;
             // 
             // txt_codigo
             // 
-            this.txt_codigo.Location = new System.Drawing.Point(250, 66);
+            this.txt_codigo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codigo.Location = new System.Drawing.Point(249, 75);
             this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(100, 20);
+            this.txt_codigo.Size = new System.Drawing.Size(163, 32);
             this.txt_codigo.TabIndex = 17;
             this.txt_codigo.Leave += new System.EventHandler(this.txt_codigo_Leave);
             // 
@@ -96,7 +101,7 @@
             this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar.Location = new System.Drawing.Point(592, 282);
+            this.btn_guardar.Location = new System.Drawing.Point(539, 208);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(187, 62);
             this.btn_guardar.TabIndex = 16;
@@ -107,68 +112,70 @@
             // lbl_apellido
             // 
             this.lbl_apellido.AutoSize = true;
-            this.lbl_apellido.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellido.Location = new System.Drawing.Point(69, 150);
+            this.lbl_apellido.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apellido.Location = new System.Drawing.Point(30, 194);
             this.lbl_apellido.Name = "lbl_apellido";
-            this.lbl_apellido.Size = new System.Drawing.Size(148, 22);
+            this.lbl_apellido.Size = new System.Drawing.Size(160, 24);
             this.lbl_apellido.TabIndex = 15;
             this.lbl_apellido.Text = "Apellido Usuario";
             // 
             // lbl_verificacion
             // 
             this.lbl_verificacion.AutoSize = true;
-            this.lbl_verificacion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_verificacion.Location = new System.Drawing.Point(433, 133);
+            this.lbl_verificacion.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_verificacion.Location = new System.Drawing.Point(434, 132);
             this.lbl_verificacion.Name = "lbl_verificacion";
-            this.lbl_verificacion.Size = new System.Drawing.Size(181, 22);
+            this.lbl_verificacion.Size = new System.Drawing.Size(202, 24);
             this.lbl_verificacion.TabIndex = 14;
             this.lbl_verificacion.Text = "Verificar Contraseña";
             // 
             // lbl_contraseña
             // 
             this.lbl_contraseña.AutoSize = true;
-            this.lbl_contraseña.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_contraseña.Location = new System.Drawing.Point(433, 66);
+            this.lbl_contraseña.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_contraseña.Location = new System.Drawing.Point(434, 75);
             this.lbl_contraseña.Name = "lbl_contraseña";
-            this.lbl_contraseña.Size = new System.Drawing.Size(107, 22);
+            this.lbl_contraseña.Size = new System.Drawing.Size(119, 24);
             this.lbl_contraseña.TabIndex = 13;
             this.lbl_contraseña.Text = "Contraseña";
             // 
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre.Location = new System.Drawing.Point(69, 104);
+            this.lbl_nombre.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre.Location = new System.Drawing.Point(30, 132);
             this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(147, 22);
+            this.lbl_nombre.Size = new System.Drawing.Size(160, 24);
             this.lbl_nombre.TabIndex = 12;
             this.lbl_nombre.Text = "Nombre Usuario";
+            //this.lbl_nombre.Click += new System.EventHandler(this.lbl_nombre_Click);
             // 
             // lbl_CodigoUsuario
             // 
             this.lbl_CodigoUsuario.AutoSize = true;
-            this.lbl_CodigoUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CodigoUsuario.Location = new System.Drawing.Point(69, 66);
+            this.lbl_CodigoUsuario.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CodigoUsuario.Location = new System.Drawing.Point(30, 78);
             this.lbl_CodigoUsuario.Name = "lbl_CodigoUsuario";
-            this.lbl_CodigoUsuario.Size = new System.Drawing.Size(141, 22);
+            this.lbl_CodigoUsuario.Size = new System.Drawing.Size(154, 24);
             this.lbl_CodigoUsuario.TabIndex = 11;
             this.lbl_CodigoUsuario.Text = "Codigo Usuario";
             // 
             // lbl_correo
             // 
             this.lbl_correo.AutoSize = true;
-            this.lbl_correo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_correo.Location = new System.Drawing.Point(69, 189);
+            this.lbl_correo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_correo.Location = new System.Drawing.Point(30, 246);
             this.lbl_correo.Name = "lbl_correo";
-            this.lbl_correo.Size = new System.Drawing.Size(169, 22);
+            this.lbl_correo.Size = new System.Drawing.Size(186, 24);
             this.lbl_correo.TabIndex = 22;
             this.lbl_correo.Text = "Correo Electronico";
             // 
             // txt_correo
             // 
-            this.txt_correo.Location = new System.Drawing.Point(250, 186);
+            this.txt_correo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_correo.Location = new System.Drawing.Point(249, 243);
             this.txt_correo.Name = "txt_correo";
-            this.txt_correo.Size = new System.Drawing.Size(100, 20);
+            this.txt_correo.Size = new System.Drawing.Size(163, 32);
             this.txt_correo.TabIndex = 23;
             // 
             // errorProvider1
@@ -177,7 +184,7 @@
             // 
             // Panel_CreacionUsuarios
             // 
-            this.Panel_CreacionUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(118)))), ((int)(((byte)(255)))));
+            this.Panel_CreacionUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(229)))));
             this.Panel_CreacionUsuarios.Controls.Add(this.ptb_creacionusuarios);
             this.Panel_CreacionUsuarios.Controls.Add(this.lbl_CreacionUsuarios);
             this.Panel_CreacionUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
@@ -195,14 +202,14 @@
             this.ptb_creacionusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptb_creacionusuarios.TabIndex = 1;
             this.ptb_creacionusuarios.TabStop = false;
-            this.ptb_creacionusuarios.Click += new System.EventHandler(this.ptb_creacionusuarios_Click);
+            //this.ptb_creacionusuarios.Click += new System.EventHandler(this.ptb_creacionusuarios_Click);
             // 
             // lbl_CreacionUsuarios
             // 
             this.lbl_CreacionUsuarios.AutoSize = true;
             this.lbl_CreacionUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_CreacionUsuarios.ForeColor = System.Drawing.Color.White;
-            this.lbl_CreacionUsuarios.Location = new System.Drawing.Point(239, 9);
+            this.lbl_CreacionUsuarios.Location = new System.Drawing.Point(143, 18);
             this.lbl_CreacionUsuarios.Name = "lbl_CreacionUsuarios";
             this.lbl_CreacionUsuarios.Size = new System.Drawing.Size(270, 31);
             this.lbl_CreacionUsuarios.TabIndex = 0;
@@ -210,6 +217,8 @@
             // 
             // grb_Creaciondeusuarios
             // 
+            this.grb_Creaciondeusuarios.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.grb_Creaciondeusuarios.Controls.Add(this.btn_guardar);
             this.grb_Creaciondeusuarios.Controls.Add(this.txt_contraseña);
             this.grb_Creaciondeusuarios.Controls.Add(this.txt_verificarcontra);
             this.grb_Creaciondeusuarios.Controls.Add(this.txt_correo);
@@ -222,9 +231,9 @@
             this.grb_Creaciondeusuarios.Controls.Add(this.txt_codigo);
             this.grb_Creaciondeusuarios.Controls.Add(this.lbl_verificacion);
             this.grb_Creaciondeusuarios.Controls.Add(this.lbl_apellido);
-            this.grb_Creaciondeusuarios.Location = new System.Drawing.Point(43, 64);
+            this.grb_Creaciondeusuarios.Location = new System.Drawing.Point(43, 150);
             this.grb_Creaciondeusuarios.Name = "grb_Creaciondeusuarios";
-            this.grb_Creaciondeusuarios.Size = new System.Drawing.Size(884, 378);
+            this.grb_Creaciondeusuarios.Size = new System.Drawing.Size(847, 356);
             this.grb_Creaciondeusuarios.TabIndex = 23;
             this.grb_Creaciondeusuarios.TabStop = false;
             this.grb_Creaciondeusuarios.UseCompatibleTextRendering = true;
@@ -233,14 +242,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 600);
-            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.grb_Creaciondeusuarios);
             this.Controls.Add(this.Panel_CreacionUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_creacionUsuarios";
             this.Text = "frm_creacionUsuarios";
-            this.Load += new System.EventHandler(this.frm_creacionUsuarios_Load);
+            //this.Load += new System.EventHandler(this.frm_creacionUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.Panel_CreacionUsuarios.ResumeLayout(false);
             this.Panel_CreacionUsuarios.PerformLayout();

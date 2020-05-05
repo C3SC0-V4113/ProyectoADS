@@ -15,6 +15,7 @@ namespace Proyec_ADS
         public frm_Asistencia()
         {
             InitializeComponent();
+            MessageBox.Show(this.Width + ", " + this.Height);
         }
 
         private void txt_codigo_TextChanged(object sender, EventArgs e)
