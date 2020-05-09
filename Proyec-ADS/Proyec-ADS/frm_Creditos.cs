@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyec_ADS
 {
-    public partial class frm_Asistencia : Form
+    public partial class frm_Creditos : Form
     {
-        public frm_Asistencia()
+        public frm_Creditos()
         {
             InitializeComponent();
         }

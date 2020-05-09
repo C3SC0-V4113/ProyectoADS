@@ -109,7 +109,8 @@ namespace Proyec_ADS
 
         private void btn_acercade_Click(object sender, EventArgs e)
         {
-
+            abrirFormsHijos(new frm_Creditos());
+            ocultarsubmenu();
         }
 
         private void iconocerrar_Click_1(object sender, EventArgs e)

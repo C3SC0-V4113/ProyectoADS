@@ -34,11 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconominimizar = new System.Windows.Forms.PictureBox();
+            this.iconocerrar = new System.Windows.Forms.PictureBox();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label2 = new System.Windows.Forms.Label();
-            this.iconominimizar = new System.Windows.Forms.PictureBox();
-            this.iconocerrar = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.barra = new System.Windows.Forms.Panel();
             this.carga = new System.Windows.Forms.Panel();
@@ -51,6 +51,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(-5, -19);
             this.pictureBox2.Name = "pictureBox2";
@@ -94,6 +95,28 @@
             this.panel1.Size = new System.Drawing.Size(803, 95);
             this.panel1.TabIndex = 2;
             // 
+            // iconominimizar
+            // 
+            this.iconominimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconominimizar.Image = ((System.Drawing.Image)(resources.GetObject("iconominimizar.Image")));
+            this.iconominimizar.Location = new System.Drawing.Point(744, 3);
+            this.iconominimizar.Name = "iconominimizar";
+            this.iconominimizar.Size = new System.Drawing.Size(25, 25);
+            this.iconominimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconominimizar.TabIndex = 45;
+            this.iconominimizar.TabStop = false;
+            // 
+            // iconocerrar
+            // 
+            this.iconocerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconocerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconocerrar.Image")));
+            this.iconocerrar.Location = new System.Drawing.Point(775, 3);
+            this.iconocerrar.Name = "iconocerrar";
+            this.iconocerrar.Size = new System.Drawing.Size(25, 25);
+            this.iconocerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconocerrar.TabIndex = 44;
+            this.iconocerrar.TabStop = false;
+            // 
             // splitter2
             // 
             this.splitter2.Location = new System.Drawing.Point(3, 0);
@@ -121,28 +144,6 @@
             this.label2.Size = new System.Drawing.Size(132, 59);
             this.label2.TabIndex = 28;
             this.label2.Text = "SARA";
-            // 
-            // iconominimizar
-            // 
-            this.iconominimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconominimizar.Image = ((System.Drawing.Image)(resources.GetObject("iconominimizar.Image")));
-            this.iconominimizar.Location = new System.Drawing.Point(744, 3);
-            this.iconominimizar.Name = "iconominimizar";
-            this.iconominimizar.Size = new System.Drawing.Size(25, 25);
-            this.iconominimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconominimizar.TabIndex = 45;
-            this.iconominimizar.TabStop = false;
-            // 
-            // iconocerrar
-            // 
-            this.iconocerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconocerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconocerrar.Image")));
-            this.iconocerrar.Location = new System.Drawing.Point(775, 3);
-            this.iconocerrar.Name = "iconocerrar";
-            this.iconocerrar.Size = new System.Drawing.Size(25, 25);
-            this.iconocerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconocerrar.TabIndex = 44;
-            this.iconocerrar.TabStop = false;
             // 
             // timer1
             // 
