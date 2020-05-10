@@ -14,7 +14,20 @@ namespace Proyec_ADS
         private string coddocente;
         private string nombredocente;
         private string correodocente;
+        private string Usuario;
+        private string Contraseña;
 
+
+        public string usuario
+        {
+            get { return Usuario; }
+            set { Usuario = value; }
+        }
+        public string contraseña
+        {
+            get { return Contraseña; }
+            set { Contraseña = value; }
+        }
         public string Codigo
         {
             get { return coddocente;}
@@ -47,7 +60,55 @@ namespace Proyec_ADS
             }
         }
 
-        public void Insertar(string CodUsuario, string contraseña, string Nombre, string Apellido, string Correo)
+
+
+        public bool ComprobarContraseña(string Contraseña)
+        {
+            comando.Connection = conex.AbrirConexion();
+            comando.CommandText = "BuscarContraDocente";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@Contraseña", Contraseña);
+            lector = comando.ExecuteReader();
+            if (lector.HasRows)
+            {
+                comando.Parameters.Clear();
+                conex.CerrarConexion();
+                return true;
+            }
+            else
+            {
+                comando.Parameters.Clear();
+                conex.CerrarConexion();
+                return false;
+            }
+        }
+
+
+
+
+
+
+
+        //CONSULTAR DOCENTE//////////////////
+        public DataTable ConsultarDocente()
+        {
+            DataTable Tabla = new DataTable();
+            comando.Connection = conex.AbrirConexion();
+            comando.CommandText = "ConsultarDocentes";
+            comando.CommandType = CommandType.StoredProcedure;
+            lector = comando.ExecuteReader();
+            Tabla.Load(lector);
+            lector.Close();
+            conex.CerrarConexion();
+            return Tabla;
+        }
+
+
+
+
+
+        public void Insertar(string CodUsuario, string contraseña, string Nombre, string Apellido, string Correo,string Usuario)
         {
             comando.Connection = conex.AbrirConexion();
             comando.CommandText = "CrearDocente";
@@ -58,6 +119,7 @@ namespace Proyec_ADS
             comando.Parameters.AddWithValue("@NombreDocente", Nombre);
             comando.Parameters.AddWithValue("@ApellidoDocente", Apellido);
             comando.Parameters.AddWithValue("@CorreoElectronico", Correo);
+            comando.Parameters.AddWithValue("@Usuario", Usuario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conex.CerrarConexion();
@@ -105,6 +167,21 @@ namespace Proyec_ADS
                 return false;
             }
         }
+
+
+        //modificar contraseña del docente:
+        
+        public void ModificarUsuario()
+        {
+            comando.Connection = conex.AbrirConexion();
+            comando.CommandText = "ModificarDOC";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@Usuario", Usuario);
+            comando.Parameters.AddWithValue("@Contraseña", Contraseña);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+        }
+
 
         //METODO PARA RECUPERAR CONTRASEÑA
         public string RecuperarContraseña(string userRequesting)

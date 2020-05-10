@@ -19,36 +19,52 @@ namespace Proyec_ADS
             InitializeComponent();
         }
 
+        private void ConsultarDocente()
+        {
+            Docente  d= new Docente();
+            U.DataSource=d.ConsultarDocente();
+            U.DisplayMember = "Usuario";
+           CN.DataSource = d.ConsultarDocente();
+            CN.DisplayMember = "NombreDocente";
+            NU.DataSource = d.ConsultarDocente();
+            NU.DisplayMember = "ApellidoDocente";
+            AU.DataSource = d.ConsultarDocente();
+            AU.DisplayMember = "CorreoElectronico";
+        }
+
+       
+
+
         private void limpiar()
         {
-            txt_nombre.Clear();
-            txt_apellido.Clear();
-            txt_correo.Clear();
-            txt_contraseña.Clear();
-            txt_verificarcontra.Clear();
+          errorProvider1.SetError(txtCA, "");  
+        
+          errorProvider1.SetError(txtCC, "");
+            
+          errorProvider1.SetError(txtNC, "");  
         }
 
         private bool Validar()
         {
             bool validado = true;
-            if (txt_contraseña.Text == "")
+            if (txtCA.Text == "")
             {
-                errorProvider1.SetError(txt_contraseña, "Porfavor llenar los datos requeridos");
+                errorProvider1.SetError(txtCA, "Ingrese la contraseña");
                 validado = false;
             }
-            if (txt_verificarcontra.Text == "")
+            if (txtNC.Text == "")
             {
-                errorProvider1.SetError(txt_verificarcontra, "Porfavor llenar los datos requeridos");
+                errorProvider1.SetError(txtNC, "Ingrese la contraseña");
                 validado = false;
             }
-            if (txt_nombre.Text == "")
+            if (txtCC.Text == "")
             {
-                errorProvider1.SetError(txt_nombre, "Porfavor llenar los datos requeridos");
+                errorProvider1.SetError(txtCC, "Confirmar contraseña");
                 validado = false;
             }
-            if (txt_apellido.Text == "")
+            if (txtNC.Text != txtCC.Text)
             {
-                errorProvider1.SetError(txt_apellido, "Porfavor llenar los datos requeridos");
+                errorProvider1.SetError(txtCC, "Las contraseñas no coinciden");
                 validado = false;
             }
 
@@ -57,26 +73,89 @@ namespace Proyec_ADS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Validar())
+           
+        }
+
+        private void lbl_Editarusuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_EditarUsuario_Load(object sender, EventArgs e)
+        {
+            ConsultarDocente();
+        }
+
+        private void grb_Editarusuarios_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grb_Editarusuarios_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_guardar_Click_1(object sender, EventArgs e)
+        {
+            try
             {
-                if (txt_contraseña.Text == txt_verificarcontra.Text)
+                limpiar();
+                if (Validar() == true)
                 {
-                    try
-                    {
-                        profe.Editar("SA190544", txt_contraseña.Text, txt_nombre.Text, txt_apellido.Text, txt_correo.Text);
-                        MessageBox.Show("Docente se ha editado con Exito");
-                        limpiar();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error en la base de Datos");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("La contraseña no concuerda");
+                    profe.usuario = Convert.ToString(U.Text);
+                    profe.contraseña = txtCC.Text;
+                    profe.ModificarUsuario();
+                    MessageBox.Show("Cambios realizados con éxito, reinicio de sesión obligatorio", "Mensaje", MessageBoxButtons.OK);
+                    Application.Restart();
+
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error :", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+        }
+
+        private void CE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            pNC.Visible = true;
+        }
+
+        private void txtCA_Leave(object sender, EventArgs e)
+        {
+            if (profe.ComprobarContraseña(txtCA.Text) == true)
+            {
+                btn_guardar.Enabled = true;
+                errorProvider1.Clear();
+            }
+            else
+            {
+
+                errorProvider1.SetError(txtCA, "La contraseña ingresada es incorrecta");
+                btn_guardar.Enabled = false;   
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

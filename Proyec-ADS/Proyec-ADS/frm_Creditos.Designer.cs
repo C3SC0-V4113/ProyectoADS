@@ -42,7 +42,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.iconocerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -189,12 +191,25 @@
             this.label13.TabIndex = 41;
             this.label13.Text = "Sistema Automatizado ";
             // 
+            // iconocerrar
+            // 
+            this.iconocerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconocerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconocerrar.Image")));
+            this.iconocerrar.Location = new System.Drawing.Point(896, 12);
+            this.iconocerrar.Name = "iconocerrar";
+            this.iconocerrar.Size = new System.Drawing.Size(25, 25);
+            this.iconocerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconocerrar.TabIndex = 44;
+            this.iconocerrar.TabStop = false;
+            this.iconocerrar.Click += new System.EventHandler(this.iconocerrar_Click);
+            // 
             // frm_Creditos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(950, 600);
+            this.Controls.Add(this.iconocerrar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
@@ -212,6 +227,7 @@
             this.Name = "frm_Creditos";
             this.Text = "Creditos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +248,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox iconocerrar;
     }
 }

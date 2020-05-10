@@ -138,5 +138,16 @@ namespace Proyec_ADS
         {
             CambiarInfo(MensajeCodigo);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirFormsHijos(new frm_EditarUsuario());
+            ocultarsubmenu();
+        }
     }
 }

@@ -53,9 +53,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-5, -19);
+            this.pictureBox2.Location = new System.Drawing.Point(-7, -19);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(972, 527);
+            this.pictureBox2.Size = new System.Drawing.Size(974, 527);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -181,6 +181,7 @@
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_cargando";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargando";
             this.Load += new System.EventHandler(this.frm_cargando_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

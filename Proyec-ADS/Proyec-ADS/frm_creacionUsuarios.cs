@@ -27,12 +27,18 @@ namespace Proyec_ADS
             txt_correo.Clear();
             txt_contraseña.Clear();
             txt_verificarcontra.Clear();
+            txtUsuario.Clear();
         }
 
         private bool Validar()
         {
             bool validado = true;
             if (txt_codigo.Text == "")
+            {
+                errorProvider1.SetError(txt_codigo, "Porfavor llenar los datos requeridos");
+                validado = false;
+            }
+            if (txtUsuario.Text == "")
             {
                 errorProvider1.SetError(txt_codigo, "Porfavor llenar los datos requeridos");
                 validado = false;
@@ -57,32 +63,18 @@ namespace Proyec_ADS
                 errorProvider1.SetError(txt_apellido, "Porfavor llenar los datos requeridos");
                 validado = false;
             }
+            if (txt_correo.Text == "")
+            {
+                errorProvider1.SetError(txt_apellido, "Porfavor llenar los datos requeridos");
+                validado = false;
+            }
 
             return validado;
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            if (Validar())
-            {
-                if (txt_contraseña.Text == txt_verificarcontra.Text)
-                {
-                    try
-                    {
-                        profe.Insertar(txt_codigo.Text, txt_contraseña.Text, txt_nombre.Text, txt_apellido.Text, txt_correo.Text);
-                        MessageBox.Show("Docente Guardado con Exito");
-                        limpiar();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error en la base de Datos");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("La contraseña no concuerda");
-                }
-            }
+           
         }
 
         private void txt_codigo_Leave(object sender, EventArgs e)
@@ -96,6 +88,69 @@ namespace Proyec_ADS
             {
                 errorProvider1.Clear();
                 btn_guardar.Enabled = true;
+            }
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lbl_CodigoUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grb_Creaciondeusuarios_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_verificarcontra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void btn_salir_Click_1(object sender, EventArgs e)
+        {
+            frm_login log = new frm_login();
+            log.Visible = true;
+            this.Visible = false;
+        }
+
+        private void btn_guardar_Click_1(object sender, EventArgs e)
+        {
+            if (Validar())
+            {
+                if (txt_contraseña.Text == txt_verificarcontra.Text)
+                {
+                    try
+                    {
+                        profe.Insertar(txt_codigo.Text, txt_contraseña.Text, txt_nombre.Text, txt_apellido.Text, txt_correo.Text, txtUsuario.Text);
+                        MessageBox.Show("Docente Guardado con Exito, se requiere inicio de sesión");
+                        Application.Restart();
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error :", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La contraseña no concuerda");
+                }
             }
         }
     }

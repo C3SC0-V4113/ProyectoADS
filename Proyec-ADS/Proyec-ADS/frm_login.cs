@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Proyec_ADS
 {
     public partial class frm_login : Form
@@ -15,6 +16,7 @@ namespace Proyec_ADS
         public frm_login()
         {
             InitializeComponent();
+        
         }
 
         Docente docente = new Docente();
@@ -34,7 +36,33 @@ namespace Proyec_ADS
             txt_contraseña.Clear();
             txt_usuario.Focus();
             this.Show();
+            
         }
+
+        //abriendo panel de autorización y bloqueando fondo
+        public void Bloquear()
+        {
+            if (panelA.Visible == true)
+            {
+                btn_iniciar.Enabled = false;
+                btn_salir.Enabled = false;
+                btn_salir.Enabled = false;
+                linkLabel2.Enabled = false;
+                linklbl_olvido.Enabled = false;
+
+            }
+            else
+            {
+                btn_iniciar.Enabled = true;
+                btn_salir.Enabled = true;
+                btn_salir.Enabled = true;
+                linkLabel2.Enabled = true;
+                linklbl_olvido.Enabled = true;
+            }
+            
+        }
+
+
 
         //MÉTODO ERROR: GENERA EL MENSAJE CONTENIDO EN M, MOSTRÁNDOLO EN LBLERROR
         private void error(string m)
@@ -70,6 +98,7 @@ namespace Proyec_ADS
             {
                 txt_usuario.Text = "Usuario";
                 txt_usuario.ForeColor = Color.DimGray;
+                logfail.Visible = false;
             }
         }
 
@@ -89,6 +118,7 @@ namespace Proyec_ADS
             {
                 txt_contraseña.Text = "*********";
                 txt_contraseña.ForeColor = Color.DimGray;
+                logfail.Visible = false;
             }
 
         }
@@ -105,6 +135,7 @@ namespace Proyec_ADS
 
         private void btn_iniciar_Click_1(object sender, EventArgs e)
         {
+            
             bool valido = ValidarLogin(txt_usuario.Text, txt_contraseña.Text);
             string Codigo = docente.Codigo;
             if (valido == true)
@@ -118,9 +149,66 @@ namespace Proyec_ADS
             {
                 error("Usuario y/o Contraseña inválidos");
                 txt_usuario.Clear();
+                logfail.Visible = true;
                 txt_contraseña.Clear();
                 txt_usuario.Focus();
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void frm_login_Load(object sender, EventArgs e)
+        {
+            Bloquear();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panelA.Visible = true;
+            Bloquear();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            panelA.Visible = false;
+            Bloquear();
+        }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            if (txtAUTOR.Text == "QPK54-FRTW2-FRE4-45DD") {
+                frm_creacionUsuarios m = new frm_creacionUsuarios();
+                m.Visible = true;
+                this.Visible = false;
+                           
+            }
+            else
+            {
+                txtAUTOR.Clear();
+                laberror.Visible = true;
+                txtAUTOR.Focus();
+                
+                
+            }
+        }
+
+        private void panelA_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtAUTOR_KeyUp(object sender, KeyEventArgs e)
+        {
+                laberror.Visible = false;
+         
         }
     }
 }

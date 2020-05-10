@@ -50,10 +50,27 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panelA = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtAUTOR = new System.Windows.Forms.TextBox();
+            this.btn_aceptar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.laberror = new System.Windows.Forms.Label();
+            this.logfail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelA.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -88,7 +105,6 @@
             this.label3.Size = new System.Drawing.Size(32, 24);
             this.label3.TabIndex = 21;
             this.label3.Text = "de";
-            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -158,7 +174,7 @@
             // 
             this.linklbl_olvido.AutoSize = true;
             this.linklbl_olvido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linklbl_olvido.Location = new System.Drawing.Point(150, 432);
+            this.linklbl_olvido.Location = new System.Drawing.Point(150, 436);
             this.linklbl_olvido.Name = "linklbl_olvido";
             this.linklbl_olvido.Size = new System.Drawing.Size(162, 16);
             this.linklbl_olvido.TabIndex = 24;
@@ -191,7 +207,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.logfail);
             this.panel1.Controls.Add(this.iconominimizar);
+            this.panel1.Controls.Add(this.linklbl_olvido);
             this.panel1.Controls.Add(this.btn_salir);
             this.panel1.Controls.Add(this.iconocerrar);
             this.panel1.Controls.Add(this.btn_iniciar);
@@ -209,7 +227,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 503);
             this.panel1.TabIndex = 20;
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // iconominimizar
             // 
@@ -314,13 +331,185 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(145, 448);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(11, 16);
+            this.linkLabel1.TabIndex = 34;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = " ";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(235, 447);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(78, 16);
+            this.linkLabel2.TabIndex = 44;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Registrarse";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(92, 445);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(146, 18);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "¿No posee acceso? ";
+            // 
+            // panelA
+            // 
+            this.panelA.BackColor = System.Drawing.Color.White;
+            this.panelA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelA.Controls.Add(this.laberror);
+            this.panelA.Controls.Add(this.btn_aceptar);
+            this.panelA.Controls.Add(this.txtAUTOR);
+            this.panelA.Controls.Add(this.label17);
+            this.panelA.Controls.Add(this.label15);
+            this.panelA.Controls.Add(this.label16);
+            this.panelA.Controls.Add(this.panel3);
+            this.panelA.Location = new System.Drawing.Point(121, 133);
+            this.panelA.Name = "panelA";
+            this.panelA.Size = new System.Drawing.Size(598, 255);
+            this.panelA.TabIndex = 46;
+            this.panelA.Visible = false;
+            this.panelA.Paint += new System.Windows.Forms.PaintEventHandler(this.panelA_Paint);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(289, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 20);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "Alerta!";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(596, 31);
+            this.panel3.TabIndex = 46;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(141, 58);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(337, 13);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "_______________________________________________________";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label15.Location = new System.Drawing.Point(156, 48);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(308, 20);
+            this.label15.TabIndex = 48;
+            this.label15.Text = "Se requiere autorización del Administrador";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label17.Location = new System.Drawing.Point(185, 100);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(266, 16);
+            this.label17.TabIndex = 49;
+            this.label17.Text = "Por favor, ingrese el código de autorización";
+            // 
+            // txtAUTOR
+            // 
+            this.txtAUTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAUTOR.Location = new System.Drawing.Point(188, 126);
+            this.txtAUTOR.Name = "txtAUTOR";
+            this.txtAUTOR.PasswordChar = '*';
+            this.txtAUTOR.Size = new System.Drawing.Size(249, 21);
+            this.txtAUTOR.TabIndex = 50;
+            this.txtAUTOR.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAUTOR_KeyUp);
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aceptar.ForeColor = System.Drawing.Color.White;
+            this.btn_aceptar.Location = new System.Drawing.Point(264, 164);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(110, 35);
+            this.btn_aceptar.TabIndex = 44;
+            this.btn_aceptar.Text = "Ingresar";
+            this.btn_aceptar.UseVisualStyleBackColor = false;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(569, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // laberror
+            // 
+            this.laberror.AutoSize = true;
+            this.laberror.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laberror.ForeColor = System.Drawing.Color.Red;
+            this.laberror.Location = new System.Drawing.Point(214, 216);
+            this.laberror.Name = "laberror";
+            this.laberror.Size = new System.Drawing.Size(213, 18);
+            this.laberror.TabIndex = 51;
+            this.laberror.Text = "Código de acceso incorrecto :(";
+            this.laberror.Visible = false;
+            // 
+            // logfail
+            // 
+            this.logfail.AutoSize = true;
+            this.logfail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logfail.ForeColor = System.Drawing.Color.Red;
+            this.logfail.Location = new System.Drawing.Point(129, 279);
+            this.logfail.Name = "logfail";
+            this.logfail.Size = new System.Drawing.Size(223, 18);
+            this.logfail.TabIndex = 52;
+            this.logfail.Text = "Usuario y/o contraseña inválidos";
+            this.logfail.Visible = false;
+            // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(836, 497);
-            this.Controls.Add(this.linklbl_olvido);
+            this.Controls.Add(this.panelA);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -329,13 +518,19 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_login";
-            //this.Load += new System.EventHandler(this.frm_login_Load);
+            this.Load += new System.EventHandler(this.frm_login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelA.ResumeLayout(false);
+            this.panelA.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,5 +561,19 @@
         //private System.Windows.Forms.Label lblerror;
         private System.Windows.Forms.PictureBox iconominimizar;
         private System.Windows.Forms.PictureBox iconocerrar;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panelA;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtAUTOR;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btn_aceptar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label laberror;
+        private System.Windows.Forms.Label logfail;
     }
 }

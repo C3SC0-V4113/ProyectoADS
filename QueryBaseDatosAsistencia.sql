@@ -2,6 +2,7 @@
 GO
 CREATE DATABASE RegistroDeAsistencia
 GO
+SELECT*FROM DOCENTES;
 USE RegistroDeAsistencia
 GO
 --DROP DATABASE RegistroDeAsistencia
@@ -107,6 +108,28 @@ as
 SELECT*FROM DOCENTES
 WHERE CodDocente=@CodDocente
 GO
+
+create proc BuscarContraDocente
+@Contraseña varchar(max)
+as
+SELECT*FROM DOCENTES
+WHERE Contraseña=@Contraseña
+GO
+
+create proc ConsultarDocentes
+as 
+select*from Docentes order by CodDocente asc
+go
+
+
+create proc ModificarDOC
+@Usuario char(10),
+@Contraseña varchar(max)
+as update Docentes set Usuario=@Usuario,Contraseña=@Contraseña where Usuario=@Usuario
+go
+
+exec ModificarDOC elmario,'1234';
+select*from Docentes;
 
 create proc InicioSesion
 @Usuario char(10),
