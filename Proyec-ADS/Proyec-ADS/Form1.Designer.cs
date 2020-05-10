@@ -348,6 +348,7 @@
             this.MinimumSize = new System.Drawing.Size(1200, 600);
             this.Name = "frm_menu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frm_menu_Load);
             this.panel_menulateral.ResumeLayout(false);
             this.panel_asistencia.ResumeLayout(false);
             this.panel_estudiantes.ResumeLayout(false);

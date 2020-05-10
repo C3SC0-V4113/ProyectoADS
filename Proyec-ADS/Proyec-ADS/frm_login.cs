@@ -106,12 +106,12 @@ namespace Proyec_ADS
         private void btn_iniciar_Click_1(object sender, EventArgs e)
         {
             bool valido = ValidarLogin(txt_usuario.Text, txt_contraseña.Text);
+            string Codigo = docente.Codigo;
             if (valido == true)
             {
                 frm_cargando m = new frm_cargando();
-                frm_menu menu = new frm_menu();
+                m.Mensaje = Codigo;
                 m.Show();
-                menu.FormClosed += LogOut;
                 this.Hide();
             }
             else

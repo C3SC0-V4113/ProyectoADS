@@ -11,6 +11,16 @@ namespace Proyec_ADS
 {
     class Docente
     {
+        private string coddocente;
+        private string nombredocente;
+        private string correodocente;
+
+        public string Codigo
+        {
+            get { return coddocente;}
+            set { coddocente = value; }
+        }
+
         private Conexion conex = new Conexion();
         SqlCommand comando = new SqlCommand();
         SqlDataReader lector;
@@ -80,6 +90,10 @@ namespace Proyec_ADS
             lector = comando.ExecuteReader();
             if (lector.HasRows)
             {
+                while (lector.Read())
+                {
+                    coddocente = lector.GetString(0);
+                }
                 comando.Parameters.Clear();
                 conex.CerrarConexion();
                 return true;
@@ -179,6 +193,32 @@ namespace Proyec_ADS
             contador = 0;
             mailCesnurado = string.Join("", palabracensurada.ToArray());
             return mailCesnurado;
+        }
+
+        public string RellenoUsuario(string CodDocente)
+        {
+            string Nombre="";
+            string Apellido="";
+            string Email="";
+            string NombreCompleto="";
+            string CadenaCompleta="";
+            comando.Connection = conex.AbrirConexion();
+            comando.CommandText = "LeerNombreMail";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@CodDocente", CodDocente);
+            lector = comando.ExecuteReader();
+            while (lector.Read())
+            {
+                Nombre = lector.GetString(0);
+                Apellido = lector.GetString(1);
+                Email = lector.GetString(2);
+                NombreCompleto = Apellido + ", " + Nombre;
+                CadenaCompleta = NombreCompleto + "-" + Email;
+            }
+            comando.Parameters.Clear();
+            conex.CerrarConexion();
+            return CadenaCompleta;
         }
     }
 }

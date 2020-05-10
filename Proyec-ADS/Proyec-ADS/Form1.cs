@@ -12,6 +12,8 @@ namespace Proyec_ADS
 {
     public partial class frm_menu : Form
     {
+        public string MensajeCodigo;
+
         public frm_menu()
         {
             InitializeComponent();
@@ -37,6 +39,15 @@ namespace Proyec_ADS
             panelProyeccion.Tag = hijo;
             hijo.BringToFront();
             hijo.Show();
+        }
+
+        private void CambiarInfo(string Codigo)
+        {
+            Docente profe=new Docente();
+            string cadena = profe.RellenoUsuario(Codigo);
+            string[] textos = cadena.Split('-');
+            lblnombre.Text = textos[0];
+            lblemail.Text = textos[1];
         }
 
         private void personalizardiseño()
@@ -121,6 +132,11 @@ namespace Proyec_ADS
         private void iconominimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void frm_menu_Load(object sender, EventArgs e)
+        {
+            CambiarInfo(MensajeCodigo);
         }
     }
 }

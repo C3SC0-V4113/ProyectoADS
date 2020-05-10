@@ -112,7 +112,7 @@ create proc InicioSesion
 @Usuario char(10),
 @Contraseña varchar(max)
 as
-SELECT NombreDocente FROM DOCENTES
+SELECT CodDocente FROM DOCENTES
 WHERE Usuario=@Usuario AND Contraseña=@Contraseña
 GO
 
@@ -121,6 +121,13 @@ create proc RecuperarContraseña
 as
 SELECT Usuario, Contraseña,CorreoElectronico  FROM DOCENTES
 WHERE Usuario=@Usuario
+go
+
+create proc LeerNombreMail
+@CodDocente varchar(8)
+as 
+SELECT NombreDocente,ApellidoDocente,CorreoElectronico FROM DOCENTES
+WHERE CodDocente=@CodDocente
 go
 
 --Pruebas
@@ -137,6 +144,8 @@ select*from DOCENTES;
 DELETE DOCENTES
 
 exec RecuperarContraseña VALLE
+
+exec LeerNombreMail VC190544
 
 SELECT Usuario, Contraseña,CorreoElectronico  FROM DOCENTES
 WHERE CodDocente='vc190544'
