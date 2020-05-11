@@ -91,16 +91,18 @@ namespace Proyec_ADS
 
 
         //CONSULTAR DOCENTE//////////////////
-        public DataTable ConsultarDocente()
+        public DataTable ConsultarDocente(string CodUsuario)
         {
             DataTable Tabla = new DataTable();
             comando.Connection = conex.AbrirConexion();
             comando.CommandText = "ConsultarDocentes";
             comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@CodDocente", CodUsuario);
             lector = comando.ExecuteReader();
             Tabla.Load(lector);
             lector.Close();
             conex.CerrarConexion();
+            comando.Parameters.Clear();
             return Tabla;
         }
 

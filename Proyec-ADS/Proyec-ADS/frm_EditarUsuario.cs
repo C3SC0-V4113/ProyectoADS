@@ -13,6 +13,7 @@ namespace Proyec_ADS
     public partial class frm_EditarUsuario : Form
     {
         Docente profe = new Docente();
+        public string Codigo;
 
         public frm_EditarUsuario()
         {
@@ -22,13 +23,13 @@ namespace Proyec_ADS
         private void ConsultarDocente()
         {
             Docente  d= new Docente();
-            U.DataSource=d.ConsultarDocente();
+            U.DataSource = d.ConsultarDocente(Codigo);
             U.DisplayMember = "Usuario";
-           CN.DataSource = d.ConsultarDocente();
+            CN.DataSource = d.ConsultarDocente(Codigo);
             CN.DisplayMember = "NombreDocente";
-            NU.DataSource = d.ConsultarDocente();
+            NU.DataSource = d.ConsultarDocente(Codigo);
             NU.DisplayMember = "ApellidoDocente";
-            AU.DataSource = d.ConsultarDocente();
+            AU.DataSource = d.ConsultarDocente(Codigo);
             AU.DisplayMember = "CorreoElectronico";
         }
 
