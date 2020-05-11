@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Proyec_ADS
 {
@@ -23,6 +24,15 @@ namespace Proyec_ADS
         }
 
         private Form formactivo = null;
+
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
 
         private void abrirFormsHijos(Form hijo)
         {
@@ -77,6 +87,7 @@ namespace Proyec_ADS
 
         private void btn_consulta_Click(object sender, EventArgs e)
         {
+            abrirFormsHijos(new ImportarEx());
             ocultarsubmenu();
         }
 
@@ -120,8 +131,8 @@ namespace Proyec_ADS
 
         private void btn_acercade_Click(object sender, EventArgs e)
         {
-            abrirFormsHijos(new frm_Creditos());
-            ocultarsubmenu();
+           
+           
         }
 
         private void iconocerrar_Click_1(object sender, EventArgs e)
@@ -141,13 +152,36 @@ namespace Proyec_ADS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            abrirFormsHijos(new frm_EditarUsuario());
+            ocultarsubmenu();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            abrirFormsHijos(new frm_EditarUsuario());
+            abrirFormsHijos(new frm_Creditos());
             ocultarsubmenu();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            ocultarsubmenu();
+        }
+
+        private void lblnombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_barra_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel_barra_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
