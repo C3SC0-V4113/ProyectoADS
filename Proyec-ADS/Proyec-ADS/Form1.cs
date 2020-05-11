@@ -154,7 +154,9 @@ namespace Proyec_ADS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            abrirFormsHijos(new frm_EditarUsuario());
+            frm_EditarUsuario edit = new frm_EditarUsuario();
+            edit.Codigo = MensajeCodigo;
+            abrirFormsHijos(edit);
             ocultarsubmenu();
         }
 

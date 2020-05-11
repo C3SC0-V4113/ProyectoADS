@@ -171,8 +171,10 @@ WHERE Contraseña=@Contraseña
 GO
 
 create proc ConsultarDocentes
+@CodDocente varchar(8)
 as 
-select*from Docentes order by CodDocente asc
+select*from Docentes
+WHERE CodDocente=@CodDocente
 go
 
 

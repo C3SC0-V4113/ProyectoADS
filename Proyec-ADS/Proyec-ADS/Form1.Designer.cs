@@ -44,6 +44,7 @@
             this.btn_registrar = new System.Windows.Forms.Button();
             this.btn_estudiantes = new System.Windows.Forms.Button();
             this.panel_logo = new System.Windows.Forms.Panel();
+            this.lblemail = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.picbx_usuario = new System.Windows.Forms.PictureBox();
             this.panelProyeccion = new System.Windows.Forms.Panel();
@@ -51,8 +52,6 @@
             this.iconominimizar = new System.Windows.Forms.PictureBox();
             this.iconocerrar = new System.Windows.Forms.PictureBox();
             this.panel_fulllateral = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblemail = new System.Windows.Forms.Label();
             this.panel_menulateral.SuspendLayout();
             this.panel_asistencia.SuspendLayout();
             this.panel_estudiantes.SuspendLayout();
@@ -300,7 +299,6 @@
             // 
             this.panel_logo.BackColor = System.Drawing.Color.Yellow;
             this.panel_logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_logo.BackgroundImage")));
-            this.panel_logo.Controls.Add(this.label1);
             this.panel_logo.Controls.Add(this.lblemail);
             this.panel_logo.Controls.Add(this.lblnombre);
             this.panel_logo.Controls.Add(this.picbx_usuario);
@@ -309,6 +307,18 @@
             this.panel_logo.Name = "panel_logo";
             this.panel_logo.Size = new System.Drawing.Size(310, 184);
             this.panel_logo.TabIndex = 0;
+            // 
+            // lblemail
+            // 
+            this.lblemail.AutoSize = true;
+            this.lblemail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(0)))));
+            this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblemail.ForeColor = System.Drawing.Color.White;
+            this.lblemail.Location = new System.Drawing.Point(101, 141);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(42, 16);
+            this.lblemail.TabIndex = 4;
+            this.lblemail.Text = "Email";
             // 
             // lblnombre
             // 
@@ -392,30 +402,6 @@
             this.panel_fulllateral.Size = new System.Drawing.Size(310, 600);
             this.panel_fulllateral.TabIndex = 5;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(0)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(147, 122);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Docente UDB";
-            // 
-            // lblemail
-            // 
-            this.lblemail.AutoSize = true;
-            this.lblemail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(0)))));
-            this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.ForeColor = System.Drawing.Color.White;
-            this.lblemail.Location = new System.Drawing.Point(101, 141);
-            this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(42, 16);
-            this.lblemail.TabIndex = 4;
-            this.lblemail.Text = "Email";
-            // 
             // frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -473,7 +459,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_acercade;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblemail;
     }
 }
