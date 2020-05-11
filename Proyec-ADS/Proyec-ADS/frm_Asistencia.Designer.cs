@@ -38,21 +38,22 @@
             this.dgv_asistencia = new System.Windows.Forms.DataGridView();
             this.txt_codigo = new System.Windows.Forms.TextBox();
             this.btn_marcar = new System.Windows.Forms.Button();
-            this.rbtn_entrada = new System.Windows.Forms.RadioButton();
-            this.rbtn_salida = new System.Windows.Forms.RadioButton();
             this.panel_RegistrodeAsistencia = new System.Windows.Forms.Panel();
             this.ptb_RegistrodeAsistencia = new System.Windows.Forms.PictureBox();
             this.lbl_RegistroAsistencia = new System.Windows.Forms.Label();
+            this.btn_NuevaClase = new System.Windows.Forms.Button();
+            this.dgv_invisible = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asistencia)).BeginInit();
             this.panel_RegistrodeAsistencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_RegistrodeAsistencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invisible)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_codigo
             // 
             this.lbl_codigo.AutoSize = true;
             this.lbl_codigo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo.Location = new System.Drawing.Point(93, 89);
+            this.lbl_codigo.Location = new System.Drawing.Point(70, 89);
             this.lbl_codigo.Name = "lbl_codigo";
             this.lbl_codigo.Size = new System.Drawing.Size(148, 24);
             this.lbl_codigo.TabIndex = 0;
@@ -62,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(534, 89);
+            this.label1.Location = new System.Drawing.Point(70, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 24);
             this.label1.TabIndex = 1;
@@ -72,9 +73,9 @@
             // 
             this.cmb_materia.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_materia.FormattingEnabled = true;
-            this.cmb_materia.Location = new System.Drawing.Point(635, 86);
+            this.cmb_materia.Location = new System.Drawing.Point(157, 159);
             this.cmb_materia.Name = "cmb_materia";
-            this.cmb_materia.Size = new System.Drawing.Size(183, 32);
+            this.cmb_materia.Size = new System.Drawing.Size(336, 32);
             this.cmb_materia.TabIndex = 2;
             // 
             // dgv_asistencia
@@ -112,12 +113,11 @@
             // txt_codigo
             // 
             this.txt_codigo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codigo.Location = new System.Drawing.Point(272, 86);
+            this.txt_codigo.Location = new System.Drawing.Point(224, 86);
             this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(185, 32);
+            this.txt_codigo.Size = new System.Drawing.Size(269, 32);
             this.txt_codigo.TabIndex = 4;
             this.txt_codigo.TabStop = false;
-            //this.txt_codigo.TextChanged += new System.EventHandler(this.txt_codigo_TextChanged);
             // 
             // btn_marcar
             // 
@@ -127,34 +127,11 @@
             this.btn_marcar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_marcar.Location = new System.Drawing.Point(634, 150);
             this.btn_marcar.Name = "btn_marcar";
-            this.btn_marcar.Size = new System.Drawing.Size(184, 48);
+            this.btn_marcar.Size = new System.Drawing.Size(242, 48);
             this.btn_marcar.TabIndex = 5;
             this.btn_marcar.Text = "Marcar";
             this.btn_marcar.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_entrada
-            // 
-            this.rbtn_entrada.AutoSize = true;
-            this.rbtn_entrada.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_entrada.Location = new System.Drawing.Point(173, 160);
-            this.rbtn_entrada.Name = "rbtn_entrada";
-            this.rbtn_entrada.Size = new System.Drawing.Size(101, 28);
-            this.rbtn_entrada.TabIndex = 6;
-            this.rbtn_entrada.TabStop = true;
-            this.rbtn_entrada.Text = "Entrada";
-            this.rbtn_entrada.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_salida
-            // 
-            this.rbtn_salida.AutoSize = true;
-            this.rbtn_salida.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_salida.Location = new System.Drawing.Point(342, 160);
-            this.rbtn_salida.Name = "rbtn_salida";
-            this.rbtn_salida.Size = new System.Drawing.Size(86, 28);
-            this.rbtn_salida.TabIndex = 7;
-            this.rbtn_salida.TabStop = true;
-            this.rbtn_salida.Text = "Salida";
-            this.rbtn_salida.UseVisualStyleBackColor = true;
+            this.btn_marcar.Click += new System.EventHandler(this.btn_marcar_Click);
             // 
             // panel_RegistrodeAsistencia
             // 
@@ -176,7 +153,6 @@
             this.ptb_RegistrodeAsistencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptb_RegistrodeAsistencia.TabIndex = 1;
             this.ptb_RegistrodeAsistencia.TabStop = false;
-            //this.ptb_RegistrodeAsistencia.Click += new System.EventHandler(this.ptb_RegistrodeAsistencia_Click);
             // 
             // lbl_RegistroAsistencia
             // 
@@ -189,15 +165,37 @@
             this.lbl_RegistroAsistencia.TabIndex = 0;
             this.lbl_RegistroAsistencia.Text = "Registro de asistencia";
             // 
+            // btn_NuevaClase
+            // 
+            this.btn_NuevaClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NuevaClase.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NuevaClase.Image = ((System.Drawing.Image)(resources.GetObject("btn_NuevaClase.Image")));
+            this.btn_NuevaClase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_NuevaClase.Location = new System.Drawing.Point(634, 77);
+            this.btn_NuevaClase.Name = "btn_NuevaClase";
+            this.btn_NuevaClase.Size = new System.Drawing.Size(242, 48);
+            this.btn_NuevaClase.TabIndex = 9;
+            this.btn_NuevaClase.Text = "Nueva Sesión";
+            this.btn_NuevaClase.UseVisualStyleBackColor = true;
+            this.btn_NuevaClase.Click += new System.EventHandler(this.btn_NuevaClase_Click);
+            // 
+            // dgv_invisible
+            // 
+            this.dgv_invisible.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_invisible.Location = new System.Drawing.Point(-35, 277);
+            this.dgv_invisible.Name = "dgv_invisible";
+            this.dgv_invisible.Size = new System.Drawing.Size(240, 150);
+            this.dgv_invisible.TabIndex = 10;
+            // 
             // frm_Asistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 600);
+            this.Controls.Add(this.dgv_invisible);
+            this.Controls.Add(this.btn_NuevaClase);
             this.Controls.Add(this.panel_RegistrodeAsistencia);
-            this.Controls.Add(this.rbtn_salida);
-            this.Controls.Add(this.rbtn_entrada);
             this.Controls.Add(this.btn_marcar);
             this.Controls.Add(this.txt_codigo);
             this.Controls.Add(this.dgv_asistencia);
@@ -207,11 +205,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Asistencia";
             this.Text = "frm_Asistencia";
-            //this.Load += new System.EventHandler(this.frm_Asistencia_Load);
+            this.Load += new System.EventHandler(this.frm_Asistencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asistencia)).EndInit();
             this.panel_RegistrodeAsistencia.ResumeLayout(false);
             this.panel_RegistrodeAsistencia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_RegistrodeAsistencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invisible)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,10 +224,10 @@
         private System.Windows.Forms.DataGridView dgv_asistencia;
         private System.Windows.Forms.TextBox txt_codigo;
         private System.Windows.Forms.Button btn_marcar;
-        private System.Windows.Forms.RadioButton rbtn_entrada;
-        private System.Windows.Forms.RadioButton rbtn_salida;
         private System.Windows.Forms.Panel panel_RegistrodeAsistencia;
         private System.Windows.Forms.Label lbl_RegistroAsistencia;
         private System.Windows.Forms.PictureBox ptb_RegistrodeAsistencia;
+        private System.Windows.Forms.Button btn_NuevaClase;
+        private System.Windows.Forms.DataGridView dgv_invisible;
     }
 }

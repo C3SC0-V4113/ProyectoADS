@@ -28,7 +28,7 @@ CorreoAlumno varchar(25),
 CREATE TABLE ASIGNATURAS
 (
 CodAsignatura int identity(1,1) not null,
-NombreAsignatura varchar(max),
+NombreAsignatura varchar(70),
 CantidadUV int,
 )
 
@@ -129,6 +129,7 @@ ALTER TABLE SESIONES
 ADD CONSTRAINT FK_Group
 FOREIGN KEY (CodGrupo)
 REFERENCES GRUPOS(CodGrupo)
+GO
 
 --Procedimientos
 create proc CrearDocente
@@ -221,6 +222,7 @@ create proc CrearSesion
 @FechaSesion date
 as
 INSERT INTO SESIONES VALUES(@CodDocente,@CodGrupo,@FechaSesion)
+SELECT SCOPE_IDENTITY() AS 'Identidad'
 go
 
 create proc CrearAsistencia
@@ -232,7 +234,6 @@ INSERT INTO ASISTENCIAS VALUES(@CodSesion,@CodCarnet,@HoraEntrada)
 go
 
 create proc EditarAsistencia
-@CodAsistencia int,
 @CodSesion int,
 @CodCarnet varchar(8),
 @HoraEntrada date
@@ -241,7 +242,51 @@ UPDATE ASISTENCIAS SET HoraEntrada=@HoraEntrada
 WHERE CodCarnet=@CodCarnet AND CodSesion=@CodSesion
 go
 
+create proc MostrarGrupos
+as
+select G.CodGrupo, (A.NombreAsignatura+' '+G.CodGrupo)AS'Nombre de Asignatura' From GRUPOS G
+INNER JOIN ASIGNATURAS A ON G.CodAsignatura=A.CodAsignatura
+go
+
+create proc AlumnosDeSalon
+@CodGrupo varchar(12)
+as
+SELECT E.CodCarnet FROM DETALLE_ALUMNO_GRUPO DAG
+INNER JOIN ESTUDIANTES E ON DAG.CodCarnet=E.CodCarnet
+WHERE CodGrupo=@CodGrupo
+go
+
+create proc MostrarAsistencia
+@CodSesion int
+as
+SELECT E.CodCarnet,(E.ApellidoAlumno+', '+E.NombreAlumno)AS'Apellido, Nombres', FORMAT(HoraEntrada,'dddd, MMMM dd, yyyy hh:mm:ss tt')AS'Hora Entrada' FROM ASISTENCIAS A
+INNER JOIN ESTUDIANTES E ON A.CodCarnet=E.CodCarnet
+WHERE CodSesion=@CodSesion
+go
+
+create proc BusquedaFecha
+@CodGrupo varchar(12),
+@FechaInicial date,
+@FechaFinal date
+as
+SELECT CodSesion,CodGrupo,FechaSesion FROM SESIONES
+WHERE CodGrupo=@CodGrupo AND FechaSesion BETWEEN @FechaInicial AND @FechaFinal
+go
+
+--Validaciones
+ALTER TABLE ASISTENCIAS
+ADD CONSTRAINT DF_horaEntrada
+DEFAULT null for HoraEntrada
+
 --Pruebas
+
+exec MostrarGrupos
+
+exec MostrarAsistencia 2
+exec EditarAsistencia 39,VC324754,'12-12-12'
+
+exec AlumnosDeSalon ADS044532
+
 exec CrearDocente 'VC190544','Francisco José','Valle Cornejo','ratchet00','frankjose00@gmail.com','CESCO'
 
 exec EditarDocente 'VC190544','Cosme','Fulanito','betho00','vallecesco@gmail.com','VALLE'
@@ -262,7 +307,7 @@ SELECT Usuario, Contraseña,CorreoElectronico  FROM DOCENTES
 WHERE CodDocente='vc190544'
 
 exec CrearEstudiantes 'VC324654','Peto',' Amaya','petito@gmail.com'
-exec CrearEstudiantes 'VC324754','Juanito',' Alcachofa','juanito69@gmail.com'
+exec CrearEstudiantes 'VC498750','Juanito',' Alcachofa','juanito69@gmail.com'
 exec CrearEstudiantes 'VC498750','Karla',' Valle','pussydestroyer@gmail.com'
 exec CrearEstudiantes 'VC998765','Carolina',' Salinas','conejitobueno@gmail.com'
 
@@ -299,6 +344,8 @@ WHERE G.CodGrupo='ADS044532'
 select*from DETALLE_ALUMNO_GRUPO
 
 exec CrearSesion VC190544,PED4323,'11-11-11'
+exec CrearSesion VC190544,POO6378,'11-11-11'
+exec CrearSesion VC190544,ADS044532,'12-12-12'
 
 exec CrearAsistencia 1,VC324754,'11-11-11'
 exec CrearAsistencia 1,VC498750,'11-11-11'
@@ -306,3 +353,5 @@ exec CrearAsistencia 1,VC498750,'11-11-11'
 select*from ASISTENCIAS
 
 select*from SESIONES
+DELETE FROM SESIONES
+WHERE CodSesion>3

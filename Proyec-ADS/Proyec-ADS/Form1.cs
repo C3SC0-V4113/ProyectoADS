@@ -98,7 +98,9 @@ namespace Proyec_ADS
 
         private void btn_tomarasistencia_Click(object sender, EventArgs e)
         {
-            abrirFormsHijos(new frm_Asistencia());
+            frm_Asistencia Asis = new frm_Asistencia();
+            Asis.CodDocente = MensajeCodigo;
+            abrirFormsHijos(Asis);
             ocultarsubmenu();
         }
 

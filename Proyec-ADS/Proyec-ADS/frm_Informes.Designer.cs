@@ -42,6 +42,7 @@
             this.ptb_informes = new System.Windows.Forms.PictureBox();
             this.Lbl_informes = new System.Windows.Forms.Label();
             this.slp_contenedor = new System.Windows.Forms.SplitContainer();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_informes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalleasistencia)).BeginInit();
             this.Panel_Informes.SuspendLayout();
@@ -50,13 +51,17 @@
             this.slp_contenedor.Panel1.SuspendLayout();
             this.slp_contenedor.Panel2.SuspendLayout();
             this.slp_contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_fechainicial
             // 
             this.lbl_fechainicial.AutoSize = true;
             this.lbl_fechainicial.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fechainicial.Location = new System.Drawing.Point(12, 82);
+            this.lbl_fechainicial.Location = new System.Drawing.Point(45, 42);
             this.lbl_fechainicial.Name = "lbl_fechainicial";
             this.lbl_fechainicial.Size = new System.Drawing.Size(129, 24);
             this.lbl_fechainicial.TabIndex = 0;
@@ -66,7 +71,7 @@
             // 
             this.lbl_fechafinal.AutoSize = true;
             this.lbl_fechafinal.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fechafinal.Location = new System.Drawing.Point(12, 147);
+            this.lbl_fechafinal.Location = new System.Drawing.Point(45, 107);
             this.lbl_fechafinal.Name = "lbl_fechafinal";
             this.lbl_fechafinal.Size = new System.Drawing.Size(120, 24);
             this.lbl_fechafinal.TabIndex = 1;
@@ -76,7 +81,7 @@
             // 
             this.lbl_clase.AutoSize = true;
             this.lbl_clase.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clase.Location = new System.Drawing.Point(577, 82);
+            this.lbl_clase.Location = new System.Drawing.Point(610, 42);
             this.lbl_clase.Name = "lbl_clase";
             this.lbl_clase.Size = new System.Drawing.Size(64, 24);
             this.lbl_clase.TabIndex = 2;
@@ -85,7 +90,7 @@
             // dtp_fechainicial
             // 
             this.dtp_fechainicial.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fechainicial.Location = new System.Drawing.Point(147, 79);
+            this.dtp_fechainicial.Location = new System.Drawing.Point(180, 39);
             this.dtp_fechainicial.Name = "dtp_fechainicial";
             this.dtp_fechainicial.Size = new System.Drawing.Size(379, 32);
             this.dtp_fechainicial.TabIndex = 3;
@@ -93,7 +98,7 @@
             // dtp_fechafinal
             // 
             this.dtp_fechafinal.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fechafinal.Location = new System.Drawing.Point(147, 141);
+            this.dtp_fechafinal.Location = new System.Drawing.Point(180, 101);
             this.dtp_fechafinal.Name = "dtp_fechafinal";
             this.dtp_fechafinal.Size = new System.Drawing.Size(379, 32);
             this.dtp_fechafinal.TabIndex = 4;
@@ -102,7 +107,7 @@
             // 
             this.cmb_clase.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_clase.FormattingEnabled = true;
-            this.cmb_clase.Location = new System.Drawing.Point(667, 79);
+            this.cmb_clase.Location = new System.Drawing.Point(700, 39);
             this.cmb_clase.Name = "cmb_clase";
             this.cmb_clase.Size = new System.Drawing.Size(201, 32);
             this.cmb_clase.TabIndex = 5;
@@ -113,8 +118,11 @@
             this.dgv_informes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_informes.Location = new System.Drawing.Point(0, 0);
             this.dgv_informes.Name = "dgv_informes";
-            this.dgv_informes.Size = new System.Drawing.Size(482, 356);
+            this.dgv_informes.RowHeadersVisible = false;
+            this.dgv_informes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_informes.Size = new System.Drawing.Size(352, 381);
             this.dgv_informes.TabIndex = 6;
+            this.dgv_informes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_informes_CellClick);
             // 
             // dgv_detalleasistencia
             // 
@@ -122,8 +130,11 @@
             this.dgv_detalleasistencia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_detalleasistencia.Location = new System.Drawing.Point(0, 0);
             this.dgv_detalleasistencia.Name = "dgv_detalleasistencia";
-            this.dgv_detalleasistencia.Size = new System.Drawing.Size(464, 356);
+            this.dgv_detalleasistencia.RowHeadersVisible = false;
+            this.dgv_detalleasistencia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_detalleasistencia.Size = new System.Drawing.Size(594, 381);
             this.dgv_detalleasistencia.TabIndex = 7;
+            this.dgv_detalleasistencia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_informes_CellClick);
             // 
             // btn_buscar
             // 
@@ -131,12 +142,13 @@
             this.btn_buscar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
             this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscar.Location = new System.Drawing.Point(667, 139);
+            this.btn_buscar.Location = new System.Drawing.Point(700, 99);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(169, 40);
             this.btn_buscar.TabIndex = 8;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // Panel_Informes
             // 
@@ -172,8 +184,8 @@
             // 
             // slp_contenedor
             // 
-            this.slp_contenedor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.slp_contenedor.Location = new System.Drawing.Point(0, 244);
+            this.slp_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slp_contenedor.Location = new System.Drawing.Point(0, 0);
             this.slp_contenedor.Name = "slp_contenedor";
             // 
             // slp_contenedor.Panel1
@@ -183,9 +195,33 @@
             // slp_contenedor.Panel2
             // 
             this.slp_contenedor.Panel2.Controls.Add(this.dgv_detalleasistencia);
-            this.slp_contenedor.Size = new System.Drawing.Size(950, 356);
-            this.slp_contenedor.SplitterDistance = 482;
+            this.slp_contenedor.Size = new System.Drawing.Size(950, 381);
+            this.slp_contenedor.SplitterDistance = 352;
             this.slp_contenedor.TabIndex = 10;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 49);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.dtp_fechainicial);
+            this.splitContainer1.Panel1.Controls.Add(this.lbl_fechainicial);
+            this.splitContainer1.Panel1.Controls.Add(this.lbl_fechafinal);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_buscar);
+            this.splitContainer1.Panel1.Controls.Add(this.lbl_clase);
+            this.splitContainer1.Panel1.Controls.Add(this.cmb_clase);
+            this.splitContainer1.Panel1.Controls.Add(this.dtp_fechafinal);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.slp_contenedor);
+            this.splitContainer1.Size = new System.Drawing.Size(950, 551);
+            this.splitContainer1.SplitterDistance = 166;
+            this.splitContainer1.TabIndex = 11;
             // 
             // frm_Informes
             // 
@@ -193,15 +229,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 600);
-            this.Controls.Add(this.slp_contenedor);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.Panel_Informes);
-            this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.cmb_clase);
-            this.Controls.Add(this.dtp_fechafinal);
-            this.Controls.Add(this.dtp_fechainicial);
-            this.Controls.Add(this.lbl_clase);
-            this.Controls.Add(this.lbl_fechafinal);
-            this.Controls.Add(this.lbl_fechainicial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Informes";
             this.Text = "frm_Informes";
@@ -214,8 +243,12 @@
             this.slp_contenedor.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.slp_contenedor)).EndInit();
             this.slp_contenedor.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -234,5 +267,6 @@
         private System.Windows.Forms.Label Lbl_informes;
         private System.Windows.Forms.PictureBox ptb_informes;
         private System.Windows.Forms.SplitContainer slp_contenedor;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
