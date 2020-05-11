@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ExcelDataReader;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace Proyec_ADS
 {
     public partial class ImportarEx : Form
     {
+        static public string CadenaConexion = "Server=(local);DataBase=RegistroDeAsistencia;Integrated Security=true";
+        public SqlConnection conex = new SqlConnection(CadenaConexion);
+        SqlCommand comando = new SqlCommand();
         public ImportarEx()
         {
             InitializeComponent();
@@ -26,6 +30,7 @@ namespace Proyec_ADS
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
+                    cb.Enabled = true;
                     FileStream fs = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read);
                     IExcelDataReader reader;
                     if (ofd.FilterIndex == 1)
@@ -37,6 +42,7 @@ namespace Proyec_ADS
                     //para seleccionar la hoja de calculo
                     foreach (DataTable dt in result.Tables)
                         cb.Items.Add(dt.TableName);
+                    BtnI.Visible = true;
                     reader.Close();
                 }
             }
@@ -54,8 +60,26 @@ namespace Proyec_ADS
         DataSet result;
         private void BtnI_Click(object sender, EventArgs e)
         {
-        }
+            SqlCommand exportar = new SqlCommand("insert into Estudiantes values (@CodCarnet,@NombreAlumno,@ApellidoAlumno,@CorreoAlumno)", conex);
+            conex.Open();
+         try {
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    exportar.Parameters.Clear();
+                    exportar.Parameters.AddWithValue("@CodCarnet", Convert.ToString(row.Cells["Column0"]));
+                    exportar.Parameters.AddWithValue("@NombreAlumno", Convert.ToString(row.Cells["Column1"]));
+                    exportar.Parameters.AddWithValue("@ApellidoAlumno", Convert.ToString(row.Cells["Column2"]));                                  
+                    exportar.Parameters.AddWithValue("@CorreoAlumno", Convert.ToString(row.Cells["Column3"]));
+                    exportar.ExecuteNonQuery();
 
+                }
+               
+                MessageBox.Show("Base de datos exportada con éxito");
+            }
+        catch(Exception ex){
+            MessageBox.Show(ex.Message, "Error :", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }}   
+    
         private void cb_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView.DataSource = result.Tables[cb.SelectedIndex];

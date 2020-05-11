@@ -80,10 +80,12 @@
             // 
             // cb
             // 
+            this.cb.Enabled = false;
+            this.cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb.FormattingEnabled = true;
             this.cb.Location = new System.Drawing.Point(479, 74);
             this.cb.Name = "cb";
-            this.cb.Size = new System.Drawing.Size(188, 21);
+            this.cb.Size = new System.Drawing.Size(188, 23);
             this.cb.TabIndex = 11;
             this.cb.SelectedIndexChanged += new System.EventHandler(this.cb_SelectedIndexChanged);
             // 
@@ -156,11 +158,14 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView.Location = new System.Drawing.Point(11, 21);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
             this.dataGridView.Size = new System.Drawing.Size(752, 237);
             this.dataGridView.TabIndex = 0;
             // 
@@ -176,6 +181,7 @@
             this.BtnI.TabIndex = 16;
             this.BtnI.Text = "Importar datos";
             this.BtnI.UseVisualStyleBackColor = false;
+            this.BtnI.Visible = false;
             this.BtnI.Click += new System.EventHandler(this.BtnI_Click);
             // 
             // ImportarEx
