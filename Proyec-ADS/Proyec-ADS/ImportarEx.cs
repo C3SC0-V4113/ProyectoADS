@@ -60,7 +60,7 @@ namespace Proyec_ADS
         DataSet result;
         private void BtnI_Click(object sender, EventArgs e)
         {
-            SqlCommand exportar = new SqlCommand("insert into Estudiantes values (@CodCarnet,@NombreAlumno,@ApellidoAlumno,@CorreoAlumno)", conex);
+            SqlCommand exportar = new SqlCommand("insert into Estudiantes values ('@CodCarnet','@NombreAlumno','@ApellidoAlumno','@CorreoAlumno')", conex);
             conex.Open();
          try {
                 foreach (DataGridViewRow row in dataGridView.Rows)
